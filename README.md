@@ -44,7 +44,7 @@ The website includes the following main sections:
 
 ## Contact
 
-- Website: [crimson-desert.info](https://crimson-desert.info)
+- Website: [crimson-desert.com](https://crimson-desert.com)
 - Discord: [discord.gg/crimsondesert](https://discord.gg/crimsondesert)
 - Twitter: [@crimsondesert](https://twitter.com/crimsondesert)
 - YouTube: [youtube.com/crimsondesert](https://www.youtube.com/crimsondesert)
