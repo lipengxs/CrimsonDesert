@@ -22,33 +22,42 @@
                 'nav.news': 'News',
                 'nav.media': 'Media',
                 'nav.guides': 'Guides',
+                'nav.characters': 'Characters',
                 'nav.privacy': 'Privacy Policy',
                 'nav.terms': 'Terms of Service',
                 'lang.en': 'English',
                 'lang.zh': '中文',
-                'lang.ja': '日本語'
+                'lang.ja': '日本語',
+                'supported.languages.title': 'Supported Languages',
+                'supported.languages.description': '<strong>Crimson Desert</strong> supports multiple languages including English, French, German, Spanish, Italian, Portuguese, Russian, Japanese, Chinese (Simplified & Traditional), and Korean, ensuring players worldwide can enjoy the full experience with proper localization. The comprehensive language support in <strong>Crimson Desert</strong> makes it accessible to a global audience, fostering an international community of open-world adventure enthusiasts who can fully immerse themselves in the epic tale of Kliff and the Greymanes.'
             },
             'zh-CN': {
                 'nav.home': '首页',
                 'nav.news': '新闻',
                 'nav.media': '媒体',
                 'nav.guides': '攻略',
+                'nav.characters': '角色',
                 'nav.privacy': '隐私政策',
                 'nav.terms': '服务条款',
                 'lang.en': 'English',
                 'lang.zh': '中文',
-                'lang.ja': '日本語'
+                'lang.ja': '日本語',
+                'supported.languages.title': '支持的语言',
+                'supported.languages.description': '<strong>红色沙漠</strong>支持多种语言，包括英语、法语、德语、西班牙语、意大利语、葡萄牙语、俄语、日语、中文（简体与繁体）和韩语，确保全球玩家能够通过适当的本地化享受完整的游戏体验。<strong>红色沙漠</strong>的全面语言支持使其能够面向全球受众，培养一个国际化的开放世界冒险爱好者社区，让玩家能够完全沉浸在克里夫和灰鬃团的史诗故事中。'
             },
             'ja-JP': {
                 'nav.home': 'ホーム',
                 'nav.news': 'ニュース',
                 'nav.media': 'メディア',
                 'nav.guides': 'ガイド',
+                'nav.characters': 'キャラクター',
                 'nav.privacy': 'プライバシーポリシー',
                 'nav.terms': '利用規約',
                 'lang.en': 'English',
                 'lang.zh': '中文',
-                'lang.ja': '日本語'
+                'lang.ja': '日本語',
+                'supported.languages.title': 'サポート言語',
+                'supported.languages.description': '<strong>クリムゾンデザート</strong>は、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語、ロシア語、日本語、中国語（簡体字・繁体字）、韓国語など、複数の言語をサポートしており、世界中のプレイヤーが適切なローカライゼーションで完全な体験を楽しめるようになっています。<strong>クリムゾンデザート</strong>の包括的な言語サポートにより、グローバルな視聴者にアクセス可能になり、クリフとグレイメインの壮大な物語に完全に没頭できるオープンワールドアドベンチャー愛好者の国際的なコミュニティを育成しています。'
             }
         },
 
@@ -154,12 +163,17 @@
         },
 
         applyLanguage: function() {
-            // Update navigation
+            // Update navigation and other elements
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 const translation = this.translate(key);
                 if (translation && translation !== key) {
-                    element.textContent = translation;
+                    // Check if translation contains HTML tags
+                    if (translation.includes('<') && translation.includes('>')) {
+                        element.innerHTML = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
                 }
             });
 
