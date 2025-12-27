@@ -283,31 +283,34 @@
                     <span></span>
                 </button>
                 <ul>
-                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
                     <li><a href="news.html" class="active" data-i18n="nav.news">新闻</a></li>
                     <li><a href="media.html" data-i18n="nav.media">媒体</a></li>
                     <li><a href="guides.html" data-i18n="nav.guides">攻略</a></li>
                     <li><a href="characters.html" data-i18n="nav.characters">角色</a></li>
                 </ul>
                 <div class="language-selector">
-                    <a href="../news.html">EN</a>
-                    <a href="news.html" class="active">中文</a>
-                    <a href="../ja-JP/news.html">日本語</a>
+                    <select onchange="window.location.href=this.value">
+                        <option value="../news.html">EN</option>
+                        <option value="news.html" selected>中文</option>
+                        <option value="../ja-JP/news.html">日本語</option>
+                    </select>
                 </div>
             </nav>
         </div>
         <div class="mobile-menu">
             <button class="close-menu">&times;</button>
             <ul>
-                <li><a href="/" data-i18n="nav.home">Home</a></li>
-                <li><a href="/news" data-i18n="nav.news">News</a></li>
-                <li><a href="/media" data-i18n="nav.media">Media</a></li>
-                <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+                <li><a href="media.html" data-i18n="nav.media">媒体</a></li>
+                <li><a href="guides.html" data-i18n="nav.guides">攻略</a></li>
+                <li><a href="characters.html" data-i18n="nav.characters">角色</a></li>
             </ul>
-            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
-                <a href="../news.html">EN</a>
-                <a href="news.html" class="active">中文</a>
-                <a href="../ja-JP/news.html">日本語</a>
+            <div class="language-selector" style="margin-top: 2rem; display: flex; justify-content: center;">
+                <select onchange="window.location.href=this.value">
+                    <option value="../news.html">EN</option>
+                    <option value="news.html" selected>中文</option>
+                    <option value="../ja-JP/news.html">日本語</option>
+                </select>
             </div>
         </div>
     </header>
@@ -648,7 +651,7 @@
                 <div class="footer-links">
                     <h3>Navigation</h3>
                     <ul>
-                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        
                         <li><a href="/news" data-i18n="nav.news">News</a></li>
                         <li><a href="/media" data-i18n="nav.media">Media</a></li>
                         <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>

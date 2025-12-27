@@ -234,32 +234,34 @@
                     <span></span>
                 </button>
                 <ul>
-                    <li><a href="index.html" data-i18n="nav.home">ホーム</a></li>
                     <li><a href="news.html" data-i18n="nav.news">ニュース</a></li>
                     <li><a href="media.html" data-i18n="nav.media">メディア</a></li>
                     <li><a href="guides.html" data-i18n="nav.guides">ガイド</a></li>
                     <li><a href="characters.html" class="active" data-i18n="nav.characters">キャラクター</a></li>
                 </ul>
                 <div class="language-selector">
-                    <a href="../characters.html">EN</a>
-                    <a href="../zh-CN/characters.html">中文</a>
-                    <a href="characters.html" class="active">日本語</a>
+                    <select onchange="window.location.href=this.value">
+                        <option value="../characters.html">EN</option>
+                        <option value="../zh-CN/characters.html">中文</option>
+                        <option value="characters.html" selected>日本語</option>
+                    </select>
                 </div>
             </nav>
         </div>
         <div class="mobile-menu">
             <button class="close-menu">&times;</button>
             <ul>
-                <li><a href="index.html" data-i18n="nav.home">ホーム</a></li>
                 <li><a href="news.html" data-i18n="nav.news">ニュース</a></li>
                 <li><a href="media.html" data-i18n="nav.media">メディア</a></li>
                 <li><a href="guides.html" data-i18n="nav.guides">ガイド</a></li>
                 <li><a href="characters.html" data-i18n="nav.characters">キャラクター</a></li>
             </ul>
-            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
-                <a href="../characters.html">EN</a>
-                <a href="../zh-CN/characters.html">中文</a>
-                <a href="characters.html" class="active">日本語</a>
+            <div class="language-selector" style="margin-top: 2rem; display: flex; justify-content: center;">
+                <select onchange="window.location.href=this.value">
+                    <option value="../characters.html">EN</option>
+                    <option value="../zh-CN/characters.html">中文</option>
+                    <option value="characters.html" selected>日本語</option>
+                </select>
             </div>
         </div>
     </header>
@@ -379,7 +381,7 @@
                 <div class="footer-links">
                     <h3>ナビゲーション</h3>
                     <ul>
-                        <li><a href="index.html" data-i18n="nav.home">ホーム</a></li>
+                        
                         <li><a href="news.html" data-i18n="nav.news">ニュース</a></li>
                         <li><a href="media.html" data-i18n="nav.media">メディア</a></li>
                         <li><a href="guides.html" data-i18n="nav.guides">ガイド</a></li>

@@ -260,32 +260,34 @@
                     <span></span>
                 </button>
                 <ul>
-                    <li><a href="/">Home</a></li>
                     <li><a href="/news">News</a></li>
                     <li><a href="/media" class="active">Media</a></li>
                     <li><a href="/guides">Guides</a></li>
                     <li><a href="/characters">Characters</a></li>
                 </ul>
                 <div class="language-selector">
-                    <a href="/media.html" class="active">EN</a>
-                    <a href="/zh-CN/media.html">中文</a>
-                    <a href="/ja-JP/media.html">日本語</a>
+                    <select onchange="window.location.href=this.value">
+                        <option value="/media" selected>EN</option>
+                        <option value="/zh-CN/media.html">中文</option>
+                        <option value="/ja-JP/media.html">日本語</option>
+                    </select>
                 </div>
             </nav>
         </div>
         <div class="mobile-menu">
             <button class="close-menu">&times;</button>
             <ul>
-                <li><a href="/" data-i18n="nav.home">Home</a></li>
                 <li><a href="/news" data-i18n="nav.news">News</a></li>
                 <li><a href="/media" data-i18n="nav.media">Media</a></li>
                 <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
                 <li><a href="/characters" data-i18n="nav.characters">Characters</a></li>
             </ul>
-            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
-                <a href="/media.html" class="active">EN</a>
-                <a href="/zh-CN/media.html">中文</a>
-                <a href="/ja-JP/media.html">日本語</a>
+            <div class="language-selector" style="margin-top: 2rem; display: flex; justify-content: center;">
+                <select onchange="window.location.href=this.value">
+                    <option value="/media" selected>EN</option>
+                    <option value="/zh-CN/media.html">中文</option>
+                    <option value="/ja-JP/media.html">日本語</option>
+                </select>
             </div>
         </div>
     </header>
@@ -400,7 +402,6 @@
                 <div class="footer-links">
                     <h3>Navigation</h3>
                     <ul>
-                        <li><a href="/" data-i18n="nav.home">Home</a></li>
                         <li><a href="/news" data-i18n="nav.news">News</a></li>
                         <li><a href="/media" data-i18n="nav.media">Media</a></li>
                         <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
