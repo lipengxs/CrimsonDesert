@@ -421,15 +421,20 @@
         }
 
         .faq-answer {
-            padding: 1.5rem;
-            display: none;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
             line-height: 1.7;
             color: var(--text-secondary);
             background: rgba(26, 26, 26, 0.5);
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+            box-sizing: border-box;
         }
 
         .faq-item.active .faq-answer {
-            display: block;
+            max-height: 2000px;
+            padding: 1.5rem;
         }
 
         /* Responsive Design */
@@ -693,7 +698,7 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">红色沙漠将在2026年3月19日发布时在哪些平台上提供？</div>
-                        <div class="faq-answer">当<strong>红色沙漠</strong>于<strong>2026年3月19日</strong>发布时，它将在PC（Steam）、PlayStation 5和Xbox Series X/S上提供。游戏将采用为次世代主机优化的令人惊叹的图形，让玩家能够以令人惊叹的细节体验广阔的帕卫尔世界。这确保了<strong>红色沙漠</strong>社区可以在2026年3月19日发布时在他们首选的平台上享受游戏。</div>
+                        <div class="faq-answer">当<strong>红色沙漠</strong>于<strong>2026年3月19日</strong>发布时，它将在PC（Windows和macOS，通过Steam）、PlayStation 5和Xbox Series X/S上提供。游戏将采用为次世代主机优化的令人惊叹的图形，让玩家能够以令人惊叹的细节体验广阔的帕卫尔世界。这确保了<strong>红色沙漠</strong>社区可以在2026年3月19日发布时在他们首选的平台上享受游戏。</div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">红色沙漠的故事是什么？</div>
@@ -709,7 +714,7 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">红色沙漠具有什么样的战斗系统？</div>
-                        <div class="faq-answer"><strong>红色沙漠</strong>具有激烈、真实的战斗系统，需要技巧和策略。玩家可以掌握各种武器和战斗风格，从迅捷的剑术到强大的魔法。<strong>红色沙漠</strong>中的战斗节奏快且残酷，每次攻击和移动都可能决定您的命运。游戏允许玩家通过利用不同的武器、技能和能力创造自己独特的战斗风格。</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>具有激烈、真实的战斗系统，需要技巧和策略。玩家可以掌握各种武器和战斗风格，从迅捷的剑术到强大的魔法。战斗系统包括动态近战连击、战略玩法、骑马作战和史诗Boss战。<strong>红色沙漠</strong>中的战斗节奏快且残酷，每次攻击和移动都可能决定您的命运。游戏允许玩家通过利用不同的武器、技能和能力创造自己独特的战斗风格。</div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">谁在开发红色沙漠？</div>
@@ -717,7 +722,19 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">我可以预购红色沙漠吗？</div>
-                        <div class="faq-answer">是的！<strong>红色沙漠</strong>的预购现已开放。预购游戏将让您获得独家奖励和特殊内容。预购可在所有平台上进行，包括PC（Steam）、PlayStation 5和Xbox Series X/S。<strong>红色沙漠</strong>的预购奖励包括独家物品和特殊内容的早期访问。</div>
+                        <div class="faq-answer">是的！<strong>红色沙漠</strong>的预购现已开放。预购标准数字版将获得独家"卡尔莱德盾牌"作为奖励。数字豪华版包含额外的装饰物品，如卡伊洛斯板金防具和巴尔格兰盾牌。预购可在所有平台上进行，包括PC（Steam）、PlayStation 5和Xbox Series X/S。<strong>红色沙漠</strong>的预购奖励包括独家物品和特殊内容的早期访问。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">红色沙漠的系统要求是什么？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>在PC上的最低系统要求包括：<strong>操作系统：</strong>Windows 10 64位，<strong>处理器：</strong>AMD Ryzen 5 2600X或Intel Core i5-8500，<strong>内存：</strong>16 GB RAM，<strong>显卡：</strong>NVIDIA GTX 1060或AMD RX 6500 XT。游戏采用Pearl Abyss专有的BlackSpace引擎，提供令人惊叹的视觉效果和流畅的游戏体验。请注意，系统要求可能会在接近发布日期时更新。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">除了战斗，我还能在红色沙漠中做什么？</div>
+                        <div class="faq-answer">除了激烈的战斗，<strong>红色沙漠</strong>还提供各种生活技能和活动来增强您的冒险体验。玩家可以参与<strong>钓鱼</strong>来收集食物和资源，<strong>烹饪</strong>来制作提供增益和恢复生命值的餐点，<strong>制作</strong>来创建武器、护甲和有用的物品，以及<strong>狩猎</strong>来获得肉类、毛皮和其他有价值的材料。这些活动增加了游戏深度，帮助玩家在严酷的帕卫尔世界中生存和繁荣。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">红色沙漠将支持哪些语言？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>将支持多种语言，包括英语、法语、德语、西班牙语、意大利语、葡萄牙语、俄语、日语、中文（简体和繁体）和韩语。这种全面的语言支持确保全球玩家能够通过适当的本地化充分享受游戏，使克里夫和灰鬃团的史诗故事能够被全球观众所接受。</div>
                     </div>
                 </div>
             </div>
@@ -761,44 +778,67 @@
 
     <script src="../static/base.js"></script>
     <script>
-        // Countdown Timer - March 19, 2026
-        const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Countdown Timer - March 19, 2026
+            const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
 
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
+            const countdown = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
 
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.querySelector(".countdown").innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
-            }
-        }, 1000);
+                if (daysEl) daysEl.innerHTML = days.toString().padStart(2, '0');
+                if (hoursEl) hoursEl.innerHTML = hours.toString().padStart(2, '0');
+                if (minutesEl) minutesEl.innerHTML = minutes.toString().padStart(2, '0');
+                if (secondsEl) secondsEl.innerHTML = seconds.toString().padStart(2, '0');
 
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                const isActive = item.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(faqItem => {
-                    faqItem.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
+                if (distance < 0) {
+                    clearInterval(countdown);
+                    const countdownEl = document.querySelector(".countdown");
+                    if (countdownEl) {
+                        countdownEl.innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
+                    }
                 }
+            }, 1000);
+
+            // FAQ Accordion - Ensure it works even if base.js hasn't loaded
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach((question, index) => {
+                question.style.cursor = 'pointer';
+                question.style.userSelect = 'none';
+                
+                question.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const item = this.closest('.faq-item');
+                    if (!item) return;
+                    
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        // Force a reflow to ensure CSS transition works
+                        void item.offsetHeight;
+                    }
+                });
             });
         });
 

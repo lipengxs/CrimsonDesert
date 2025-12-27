@@ -421,15 +421,20 @@
         }
 
         .faq-answer {
-            padding: 1.5rem;
-            display: none;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
             line-height: 1.7;
             color: var(--text-secondary);
             background: rgba(26, 26, 26, 0.5);
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+            box-sizing: border-box;
         }
 
         .faq-item.active .faq-answer {
-            display: block;
+            max-height: 2000px;
+            padding: 1.5rem;
         }
 
         /* Responsive Design */
@@ -694,7 +699,7 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">What platforms will Crimson Desert be available on at launch on March 19, 2026?</div>
-                        <div class="faq-answer">When <strong>Crimson Desert</strong> launches on <strong>March 19, 2026</strong>, it will be available on PC (Steam), PlayStation 5, and Xbox Series X/S. The game will feature stunning graphics optimized for next-generation consoles, allowing players to experience the vast world of Pywel in breathtaking detail. This ensures that the <strong>Crimson Desert</strong> community can enjoy the game on their preferred platform when the March 19, 2026 release arrives.</div>
+                        <div class="faq-answer">When <strong>Crimson Desert</strong> launches on <strong>March 19, 2026</strong>, it will be available on PC (Windows and macOS via Steam), PlayStation 5, and Xbox Series X/S. The game will feature stunning graphics optimized for next-generation consoles, allowing players to experience the vast world of Pywel in breathtaking detail. This ensures that the <strong>Crimson Desert</strong> community can enjoy the game on their preferred platform when the March 19, 2026 release arrives.</div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">What is the story of Crimson Desert?</div>
@@ -710,7 +715,7 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">What kind of combat system does Crimson Desert feature?</div>
-                        <div class="faq-answer"><strong>Crimson Desert</strong> features an intense, visceral combat system that requires both skill and strategy. Players can master a variety of weapons and combat styles, from swift swordplay to powerful magic. The combat in <strong>Crimson Desert</strong> is fast-paced and brutal, with each strike and move potentially deciding your fate. The game allows players to create their own unique fighting style by utilizing different weapons, skills, and abilities.</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> features an intense, visceral combat system that requires both skill and strategy. Players can master a variety of weapons and combat styles, from swift swordplay to powerful magic. The combat system includes dynamic melee combos, strategic gameplay, mounted combat, and epic boss battles. The combat in <strong>Crimson Desert</strong> is fast-paced and brutal, with each strike and move potentially deciding your fate. The game allows players to create their own unique fighting style by utilizing different weapons, skills, and abilities.</div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">Who is developing Crimson Desert?</div>
@@ -718,7 +723,19 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">Can I pre-order Crimson Desert?</div>
-                        <div class="faq-answer">Yes! Pre-orders for <strong>Crimson Desert</strong> are now available. Pre-ordering the game will give you access to exclusive bonuses and special content. Pre-orders are available on all platforms including PC (Steam), PlayStation 5, and Xbox Series X/S. The pre-order bonuses for <strong>Crimson Desert</strong> include exclusive items and early access to special content.</div>
+                        <div class="faq-answer">Yes! Pre-orders for <strong>Crimson Desert</strong> are now available. Pre-ordering the Standard Digital Edition will grant you the exclusive "Karlade Shield" as a bonus. The Digital Deluxe Edition includes additional cosmetic items such as the Kairos Plate Armor and the Balgran Shield. Pre-orders are available on all platforms including PC (Steam), PlayStation 5, and Xbox Series X/S. The pre-order bonuses for <strong>Crimson Desert</strong> include exclusive items and early access to special content.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What are the system requirements for Crimson Desert?</div>
+                        <div class="faq-answer">The minimum system requirements for <strong>Crimson Desert</strong> on PC include: <strong>OS:</strong> Windows 10 64-bit, <strong>Processor:</strong> AMD Ryzen 5 2600X or Intel Core i5-8500, <strong>Memory:</strong> 16 GB RAM, <strong>Graphics:</strong> NVIDIA GTX 1060 or AMD RX 6500 XT. The game is powered by Pearl Abyss's proprietary BlackSpace engine, which delivers stunning visuals and smooth gameplay. Please note that system requirements may be updated closer to the release date.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What activities can I do in Crimson Desert besides combat?</div>
+                        <div class="faq-answer">Beyond the intense combat, <strong>Crimson Desert</strong> offers a variety of life skills and activities to enhance your adventure. Players can engage in <strong>fishing</strong> to gather food and resources, <strong>cooking</strong> to create meals that provide buffs and restore health, <strong>crafting</strong> to create weapons, armor, and useful items, and <strong>hunting</strong> to obtain meat, hides, and other valuable materials. These activities add depth to the gameplay and help players survive and thrive in the harsh world of Pywel.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What languages will Crimson Desert support?</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> will support multiple languages including English, French, German, Spanish, Italian, Portuguese, Russian, Japanese, Chinese (Simplified & Traditional), and Korean. This comprehensive language support ensures that players worldwide can fully enjoy the game with proper localization, making the epic tale of Kliff and the Greymanes accessible to a global audience.</div>
                     </div>
                 </div>
             </div>
@@ -764,44 +781,74 @@
 
     <script src="static/base.js"></script>
     <script>
-        // Countdown Timer - March 19, 2026
-        const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Countdown Timer - March 19, 2026
+            const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
 
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
+            const countdown = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
 
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.querySelector(".countdown").innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
-            }
-        }, 1000);
+                if (daysEl) daysEl.innerHTML = days.toString().padStart(2, '0');
+                if (hoursEl) hoursEl.innerHTML = hours.toString().padStart(2, '0');
+                if (minutesEl) minutesEl.innerHTML = minutes.toString().padStart(2, '0');
+                if (secondsEl) secondsEl.innerHTML = seconds.toString().padStart(2, '0');
 
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                const isActive = item.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(faqItem => {
-                    faqItem.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
+                if (distance < 0) {
+                    clearInterval(countdown);
+                    const countdownEl = document.querySelector(".countdown");
+                    if (countdownEl) {
+                        countdownEl.innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
+                    }
                 }
+            }, 1000);
+
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            console.log('Initializing FAQ accordion, found questions:', faqQuestions.length);
+            
+            faqQuestions.forEach((question, index) => {
+                question.style.cursor = 'pointer';
+                question.style.userSelect = 'none';
+                
+                question.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const item = this.closest('.faq-item');
+                    if (!item) {
+                        console.error('FAQ item not found');
+                        return;
+                    }
+                    
+                    const isActive = item.classList.contains('active');
+                    console.log('FAQ clicked #' + index + ', isActive:', isActive, 'item:', item);
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        console.log('Added active class to item #' + index);
+                        
+                        // Force a reflow to ensure CSS transition works
+                        void item.offsetHeight;
+                    }
+                });
             });
         });
 

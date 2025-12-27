@@ -421,15 +421,20 @@
         }
 
         .faq-answer {
-            padding: 1.5rem;
-            display: none;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
             line-height: 1.7;
             color: var(--text-secondary);
             background: rgba(26, 26, 26, 0.5);
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+            box-sizing: border-box;
         }
 
         .faq-item.active .faq-answer {
-            display: block;
+            max-height: 2000px;
+            padding: 1.5rem;
         }
 
         /* Responsive Design */
@@ -688,36 +693,48 @@
                 <h2>クリムゾンデザートに関するよくある質問</h2>
                 <div class="faq-list">
                     <div class="faq-item">
-                        <div class="faq-question">What is Crimson Desert and when will it be released?</div>
-                        <div class="faq-answer"><strong>Crimson Desert</strong> is an epic open-world action adventure game that combines intense combat with deep exploration in an immersive single-player experience. The game is scheduled for official release on <strong>March 19, 2026</strong> and will be available on PC (Steam), PlayStation 5, and Xbox Series X/S platforms. Players will experience the ultimate open-world adventure with authentic combat mechanics, vast exploration, and a rich narrative. The March 19, 2026 release of <strong>Crimson Desert</strong> marks an exciting milestone for open-world gaming enthusiasts.</div>
+                        <div class="faq-question">クリムゾンデザートとは何ですか？いつリリースされますか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>は、没入感のあるシングルプレイヤー体験で、激しい戦闘と深い探索を組み合わせた壮大なオープンワールドアクションアドベンチャーゲームです。ゲームは<strong>2026年3月19日</strong>に正式リリース予定で、PC（Steam）、PlayStation 5、Xbox Series X/Sプラットフォームで利用可能になります。プレイヤーは、本格的な戦闘メカニクス、広大な探索、豊かな物語を備えた究極のオープンワールドアドベンチャーを体験できます。2026年3月19日の<strong>クリムゾンデザート</strong>のリリースは、オープンワールドゲーム愛好者にとってエキサイティングなマイルストーンです。</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">What platforms will Crimson Desert be available on at launch on March 19, 2026?</div>
-                        <div class="faq-answer">When <strong>Crimson Desert</strong> launches on <strong>March 19, 2026</strong>, it will be available on PC (Steam), PlayStation 5, and Xbox Series X/S. The game will feature stunning graphics optimized for next-generation consoles, allowing players to experience the vast world of Pywel in breathtaking detail. This ensures that the <strong>Crimson Desert</strong> community can enjoy the game on their preferred platform when the March 19, 2026 release arrives.</div>
+                        <div class="faq-question">クリムゾンデザートは2026年3月19日のリリース時にどのプラットフォームで利用可能になりますか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>が<strong>2026年3月19日</strong>にリリースされる際、PC（WindowsとmacOS、Steam経由）、PlayStation 5、Xbox Series X/Sで利用可能になります。ゲームは次世代コンソール向けに最適化された素晴らしいグラフィックを特徴とし、プレイヤーが広大なパイウェル世界を息を呑むような詳細で体験できるようになります。これにより、<strong>クリムゾンデザート</strong>コミュニティは、2026年3月19日のリリース時に好みのプラットフォームでゲームを楽しむことができます。</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">What is the story of Crimson Desert?</div>
-                        <div class="faq-answer"><strong>Crimson Desert</strong> follows the story of Kliff and the Greymanes, a mercenary group that faces a devastating ambush by their sworn enemies, the Black Bears. After a brutal night attack leaves members of the Greymanes dead or scattered across Pywel, Kliff is determined to reunite with the survivors, rebuild the fallen Greymanes, and reclaim what was lost. The story of <strong>Crimson Desert</strong> unfolds as Kliff journeys across the continent, forging alliances, facing dangers, and uncovering mysterious factions.</div>
+                        <div class="faq-question">クリムゾンデザートの物語は何ですか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>は、宿敵であるブラックベアによる壊滅的な待ち伏せに直面する傭兵団、クリフとグレイメインの物語を追います。残酷な夜間攻撃により、グレイメインのメンバーが死に、またはパイウェル各地に散らばった後、クリフは生存者と再会し、倒れたグレイメインを再建し、失われたものを取り戻すことを決意します。<strong>クリムゾンデザート</strong>の物語は、クリフが大陸を横断し、同盟を結び、危険に直面し、神秘的な派閥を発見する旅の中で展開します。</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">Is Crimson Desert a single-player or multiplayer game?</div>
-                        <div class="faq-answer"><strong>Crimson Desert</strong> is primarily a single-player open-world action adventure game. Players will experience the epic story of Kliff and the Greymanes through an immersive single-player campaign. The game focuses on delivering a rich narrative experience, intense combat, and vast exploration in a beautifully crafted open world. The single-player nature of <strong>Crimson Desert</strong> allows for a focused storytelling experience and deep character development.</div>
+                        <div class="faq-question">クリムゾンデザートはシングルプレイヤーゲームですか、それともマルチプレイヤーゲームですか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>は主にシングルプレイヤーオープンワールドアクションアドベンチャーゲームです。プレイヤーは、没入感のあるシングルプレイヤーキャンペーンを通じて、クリフとグレイメインの壮大な物語を体験します。ゲームは、美しく作られたオープンワールドで、豊かな物語体験、激しい戦闘、広大な探索を提供することに焦点を当てています。<strong>クリムゾンデザート</strong>のシングルプレイヤー性により、集中したストーリーテリング体験と深いキャラクター開発が可能になります。</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">What makes Crimson Desert different from other open-world games?</div>
-                        <div class="faq-answer"><strong>Crimson Desert</strong> combines intense combat with deep exploration, featuring a seamless open world, dynamic combat systems, and a rich narrative that unfolds across diverse landscapes. The game's focus on both action and storytelling sets it apart from traditional open-world games, offering a more immersive and cinematic experience. The world of <strong>Crimson Desert</strong> is filled with danger, mystery, and adventure, creating a unique open-world action adventure experience.</div>
+                        <div class="faq-question">クリムゾンデザートは他のオープンワールドゲームと何が違いますか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>は、激しい戦闘と深い探索を組み合わせ、シームレスなオープンワールド、動的な戦闘システム、多様な景観にわたって展開する豊かな物語を特徴としています。ゲームのアクションとストーリーテリングの両方への焦点は、従来のオープンワールドゲームとは一線を画し、より没入感があり映画的な体験を提供します。<strong>クリムゾンデザート</strong>の世界は、危険、神秘、冒険に満ちており、ユニークなオープンワールドアクションアドベンチャー体験を生み出しています。</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">What kind of combat system does Crimson Desert feature?</div>
-                        <div class="faq-answer"><strong>Crimson Desert</strong> features an intense, visceral combat system that requires both skill and strategy. Players can master a variety of weapons and combat styles, from swift swordplay to powerful magic. The combat in <strong>Crimson Desert</strong> is fast-paced and brutal, with each strike and move potentially deciding your fate. The game allows players to create their own unique fighting style by utilizing different weapons, skills, and abilities.</div>
+                        <div class="faq-question">クリムゾンデザートはどのような戦闘システムを備えていますか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>は、スキルと戦略の両方を必要とする激しく、生々しい戦闘システムを備えています。プレイヤーは、迅速な剣術から強力な魔法まで、様々な武器と戦闘スタイルを習得できます。戦闘システムには、動的な近接コンボ、戦略的なゲームプレイ、騎乗戦闘、壮大なボス戦が含まれます。<strong>クリムゾンデザート</strong>の戦闘は高速で残酷であり、各攻撃と動きがあなたの運命を決定する可能性があります。ゲームは、プレイヤーが異なる武器、スキル、能力を利用して独自の戦闘スタイルを作成することを可能にします。</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">Who is developing Crimson Desert?</div>
-                        <div class="faq-answer"><strong>Crimson Desert</strong> is being developed by Pearl Abyss, the creators of Black Desert Online. Pearl Abyss is known for creating visually stunning games with deep gameplay mechanics. The development team is working diligently to ensure <strong>Crimson Desert</strong> delivers a polished and exciting experience when it launches on March 19, 2026.</div>
+                        <div class="faq-question">クリムゾンデザートは誰が開発していますか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>は、ブラックデザートオンラインの創造者であるPearl Abyssによって開発されています。Pearl Abyssは、深いゲームプレイメカニクスを備えた視覚的に素晴らしいゲームを作成することで知られています。開発チームは、<strong>クリムゾンデザート</strong>が2026年3月19日にリリースされる際に、洗練されたエキサイティングな体験を提供するよう懸命に取り組んでいます。</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">Can I pre-order Crimson Desert?</div>
-                        <div class="faq-answer">Yes! Pre-orders for <strong>Crimson Desert</strong> are now available. Pre-ordering the game will give you access to exclusive bonuses and special content. Pre-orders are available on all platforms including PC (Steam), PlayStation 5, and Xbox Series X/S. The pre-order bonuses for <strong>Crimson Desert</strong> include exclusive items and early access to special content.</div>
+                        <div class="faq-question">クリムゾンデザートを予約注文できますか？</div>
+                        <div class="faq-answer">はい！<strong>クリムゾンデザート</strong>の予約注文は現在利用可能です。標準デジタル版を予約注文すると、独占ボーナスとして「カラレードシールド」が付与されます。デジタルデラックス版には、カイロスプレートアーマーやバルグランシールドなどの追加の装飾アイテムが含まれます。予約注文は、PC（Steam）、PlayStation 5、Xbox Series X/Sを含むすべてのプラットフォームで利用可能です。<strong>クリムゾンデザート</strong>の予約注文ボーナスには、独占アイテムと特別コンテンツへの早期アクセスが含まれます。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">クリムゾンデザートのシステム要件は何ですか？</div>
+                        <div class="faq-answer">PCでの<strong>クリムゾンデザート</strong>の最小システム要件には以下が含まれます：<strong>OS：</strong>Windows 10 64ビット、<strong>プロセッサ：</strong>AMD Ryzen 5 2600XまたはIntel Core i5-8500、<strong>メモリ：</strong>16 GB RAM、<strong>グラフィック：</strong>NVIDIA GTX 1060またはAMD RX 6500 XT。ゲームは、Pearl Abyss独自のBlackSpaceエンジンによって動力を得ており、素晴らしい視覚効果とスムーズなゲームプレイを提供します。システム要件は、リリース日に近づいて更新される可能性があることに注意してください。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">戦闘以外にクリムゾンデザートで何ができますか？</div>
+                        <div class="faq-answer">激しい戦闘を超えて、<strong>クリムゾンデザート</strong>は、冒険を強化するための様々なライフスキルと活動を提供します。プレイヤーは、<strong>釣り</strong>に従事して食料と資源を集め、<strong>料理</strong>してバフを提供しHPを回復する食事を作成し、<strong>クラフト</strong>して武器、防具、有用なアイテムを作成し、<strong>狩猟</strong>して肉、毛皮、その他の貴重な材料を入手できます。これらの活動はゲームプレイに深みを加え、プレイヤーが厳しいパイウェル世界で生き残り、繁栄するのに役立ちます。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">クリムゾンデザートはどの言語をサポートしますか？</div>
+                        <div class="faq-answer"><strong>クリムゾンデザート</strong>は、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語、ロシア語、日本語、中国語（簡体字と繁体字）、韓国語を含む複数の言語をサポートします。この包括的な言語サポートにより、世界中のプレイヤーが適切なローカライゼーションでゲームを完全に楽しむことができ、クリフとグレイメインの壮大な物語がグローバルな観客にアクセス可能になります。</div>
                     </div>
                 </div>
             </div>
@@ -762,44 +779,66 @@
 
     <script src="../static/base.js"></script>
     <script>
-        // Countdown Timer - March 19, 2026
-        const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Countdown Timer - March 19, 2026
+            const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
 
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
+            const countdown = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
 
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.querySelector(".countdown").innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
-            }
-        }, 1000);
+                if (daysEl) daysEl.innerHTML = days.toString().padStart(2, '0');
+                if (hoursEl) hoursEl.innerHTML = hours.toString().padStart(2, '0');
+                if (minutesEl) minutesEl.innerHTML = minutes.toString().padStart(2, '0');
+                if (secondsEl) secondsEl.innerHTML = seconds.toString().padStart(2, '0');
 
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                const isActive = item.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(faqItem => {
-                    faqItem.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
+                if (distance < 0) {
+                    clearInterval(countdown);
+                    const countdownEl = document.querySelector(".countdown");
+                    if (countdownEl) {
+                        countdownEl.innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
+                    }
                 }
+            }, 1000);
+
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach((question, index) => {
+                question.style.cursor = 'pointer';
+                question.style.userSelect = 'none';
+                
+                question.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const item = this.closest('.faq-item');
+                    if (!item) return;
+                    
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        // Force a reflow to ensure CSS transition works
+                        void item.offsetHeight;
+                    }
+                });
             });
         });
 

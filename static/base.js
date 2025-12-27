@@ -47,8 +47,13 @@ function initFAQAccordion() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     
     faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const item = question.parentElement;
+        question.style.cursor = 'pointer';
+        question.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const item = this.closest('.faq-item');
+            if (!item) return;
+            
             const isActive = item.classList.contains('active');
             
             // Close all FAQ items
@@ -208,7 +213,8 @@ function setLanguageSelector() {
 // Initialize all functions when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
-    initFAQAccordion();
+    // FAQ Accordion is handled by page-specific scripts
+    // initFAQAccordion();
     initGuideAccordion();
     initLightbox();
     initHeaderScroll();
