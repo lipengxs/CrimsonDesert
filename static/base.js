@@ -193,21 +193,61 @@ function initScrollAnimation() {
     });
 }
 
-// Language Selector (if needed)
+// Language Selector - Set selected option based on current page
 function setLanguageSelector() {
-    const path = window.location.pathname;
-    const languageSelect = document.querySelector('.language-selector select');
+    const languageSelects = document.querySelectorAll('.language-selector select');
     
-    if (!languageSelect) return;
+    if (!languageSelects || languageSelects.length === 0) return;
 
-    // Set default language based on path
-    switch (path) {
-        case '/ja':
-            languageSelect.value = '/ja';
-            break;
-        default:
-            languageSelect.value = '/';
-    }
+    languageSelects.forEach(select => {
+        const currentPath = window.location.pathname;
+        const currentHref = window.location.href;
+        
+        // Determine current language based on path
+        let targetText = 'EN'; // Default to English
+        if (currentPath.includes('/zh-CN/') || currentHref.includes('/zh-CN/')) {
+            targetText = '中文';
+        } else if (currentPath.includes('/ja-JP/') || currentHref.includes('/ja-JP/')) {
+            targetText = '日本語';
+        }
+        
+        // Find and set the correct option as selected by matching text content
+        const options = select.querySelectorAll('option');
+        let foundMatch = false;
+        
+        options.forEach(option => {
+            option.removeAttribute('selected');
+            
+            const optionText = option.textContent.trim();
+            
+            // Match by text content (most reliable method)
+            if (optionText === targetText && !foundMatch) {
+                option.setAttribute('selected', 'selected');
+                select.value = option.value;
+                foundMatch = true;
+            }
+        });
+        
+        // Fallback: if no match found by text, try by value
+        if (!foundMatch) {
+            options.forEach(option => {
+                const optionValue = option.value;
+                
+                if (targetText === '中文' && optionValue.includes('zh-CN')) {
+                    option.setAttribute('selected', 'selected');
+                    select.value = optionValue;
+                } else if (targetText === '日本語' && optionValue.includes('ja-JP')) {
+                    option.setAttribute('selected', 'selected');
+                    select.value = optionValue;
+                } else if (targetText === 'EN' && 
+                          (optionValue === '/' || optionValue === '../' || 
+                           (!optionValue.includes('zh-CN') && !optionValue.includes('ja-JP')))) {
+                    option.setAttribute('selected', 'selected');
+                    select.value = optionValue;
+                }
+            });
+        }
+    });
 }
 
 // Initialize all functions when DOM is ready
