@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Desert Media - Screenshots, Videos & Wallpapers</title>
+    <meta name="description" content="Explore Crimson Desert media gallery featuring stunning screenshots, gameplay videos, concept art, and downloadable wallpapers. Discover the visual world of medieval strategy in Crimson Desert.">
+    <meta name="keywords" content="Crimson Desert media, Chronicles Medieval screenshots, Chronicles Medieval videos, Chronicles Medieval wallpapers, Chronicles Medieval gallery, medieval strategy game media">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crimson-desert.info/media">
+    <meta property="og:title" content="Crimson Desert Media - Screenshots, Videos & Wallpapers">
+    <meta property="og:description" content="Explore Crimson Desert media gallery featuring stunning screenshots, gameplay videos, and downloadable wallpapers.">
+    <meta property="og:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crimson Desert Media - Screenshots, Videos & Wallpapers">
+    <meta name="twitter:description" content="Explore Crimson Desert media gallery featuring stunning screenshots, gameplay videos, and downloadable wallpapers.">
+    <meta name="twitter:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="apple-touch-icon" href="static/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="2f565d4d2f56efdc" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://crimson-desert.info/media">
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+    
+    <style>
+        .media-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.90)), 
+                        url('static/images/crimson-desert/01.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            color: var(--text-primary);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .media-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .media-hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .media-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .video-section {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 4rem 0;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .video-item {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-title {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .video-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .screenshots-section {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 4rem 0;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 2px solid var(--border-color);
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: var(--text-primary);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+            transition: color var(--transition-normal);
+        }
+
+        .close:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .media-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .media-hero p {
+                font-size: 1.1rem;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="static/logo.png" alt="Crimson Desert Logo" loading="eager" fetchpriority="high" width="200" height="60">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/media" class="active">Media</a></li>
+                    <li><a href="/guides">Guides</a></li>
+                    <li><a href="/characters">Characters</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="/media.html" class="active">EN</a>
+                    <a href="/zh-CN/media.html">中文</a>
+                    <a href="/ja-JP/media.html">日本語</a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/news" data-i18n="nav.news">News</a></li>
+                <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                <li><a href="/characters" data-i18n="nav.characters">Characters</a></li>
+            </ul>
+            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
+                <a href="/media.html" class="active">EN</a>
+                <a href="/zh-CN/media.html">中文</a>
+                <a href="/ja-JP/media.html">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl28292069.effectivegatecpm.com/c1022436be365ec29bf863fe4bce4351/invoke.js"
+        ></script>
+        <div id="container-c1022436be365ec29bf863fe4bce4351"></div>
+        <!-- Media Hero -->
+        <section class="media-hero">
+            <div class="container">
+                <h1>MEDIA GALLERY</h1>
+                <p>Explore the stunning visual world of Crimson Desert through our collection of screenshots, videos, concept art, and downloadable wallpapers. Experience the epic medieval battles and kingdom landscapes.</p>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section class="video-section">
+            <div class="container">
+                <h2 class="text-center mb-4">Gameplay Videos</h2>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1odUEBF0WCc?si=86nxcXmnyFDV_sQX" title="Crimson Desert Gameplay Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Crimson Desert Gameplay Trailer</h3>
+                            <p class="video-description">Watch the official gameplay trailer showcasing epic medieval battles, kingdom building, and strategic combat in Crimson Desert.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/219vW0b-1aY?si=ieDnC1IT6VRxyxZK" title="Crimson Desert Gameplay Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Crimson Desert Combat Showcase</h3>
+                            <p class="video-description">Experience the intense combat system of Crimson Desert with detailed unit formations, tactical positioning, and epic battlefield action.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="screenshots-section">
+            <div class="container">
+                <h2 class="text-center mb-4">Game Screenshots</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Explore stunning visuals from Crimson Desert, showcasing epic medieval battles, diverse battlefields, kingdom building, and intense strategic action that await you when the game launches in Q1 2026.</p>
+                <div class="screenshot-grid">
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/01.jpg">
+                        <img src="static/images/crimson-desert/01.jpg" alt="Crimson Desert epic open-world adventure scene">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/02.jpg">
+                        <img src="static/images/crimson-desert/02.jpg" alt="Crimson Desert vast landscape of Pywel continent">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/03.jpg">
+                        <img src="static/images/crimson-desert/03.jpg" alt="Crimson Desert intense combat showcasing action adventure gameplay">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/04.jpg">
+                        <img src="static/images/crimson-desert/04.jpg" alt="Crimson Desert character Kliff and Greymanes in action">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/05.jpg">
+                        <img src="static/images/crimson-desert/05.jpg" alt="Crimson Desert exploration and adventure in Pywel">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/06.jpg">
+                        <img src="static/images/crimson-desert/06.jpg" alt="Crimson Desert key art showcasing the game's stunning graphics">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/07.jpg">
+                        <img src="static/images/crimson-desert/07.jpg" alt="Crimson Desert epic battles and combat sequences">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/08.jpg">
+                        <img src="static/images/crimson-desert/08.jpg" alt="Crimson Desert beautiful world design and environments">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/09.jpg">
+                        <img src="static/images/crimson-desert/09.jpg" alt="Crimson Desert character and world details">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/10.jpg">
+                        <img src="static/images/crimson-desert/10.jpg" alt="Crimson Desert gameplay showcase">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/11.jpg">
+                        <img src="static/images/crimson-desert/11.jpg" alt="Crimson Desert action adventure scenes">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/crimson-desert/12.jpg">
+                        <img src="static/images/crimson-desert/12.jpg" alt="Crimson Desert open world exploration">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for full-size images -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="static/logo.png" alt="Crimson Desert Logo">
+                    </div>
+                    <p>Explore the visual world of Crimson Desert through our media gallery. Experience epic medieval battles and kingdom landscapes.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="/news" data-i18n="nav.news">News</a></li>
+                        <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                        <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                        <li><a href="/characters" data-i18n="nav.characters">Characters</a></li>
+                        <li><a href="/privacy-policy" data-i18n="nav.privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" data-i18n="nav.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/chroniclesmedieval" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/chroniclesmedieval" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/chroniclesmedieval" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/chroniclesmedieval" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Crimson Desert. All rights reserved. | Build your kingdom and experience the ultimate medieval strategy combat in Crimson Desert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/base.js"></script>
+    <script>
+        // Modal functions
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImage.src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Screenshot click handlers
+        document.querySelectorAll('.screenshot-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-src');
+                openModal(imgSrc);
+            });
+        });
+
+        // Close modal when clicking outside the image
+        window.addEventListener('click', (event) => {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('imageModal');
+                if (modal.classList.contains('active')) {
+                    closeModal();
+                }
+            }
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.video-item, .screenshot-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

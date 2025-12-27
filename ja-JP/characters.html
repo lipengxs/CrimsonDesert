@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリムゾンデザート キャラクター - Pywelの英雄たち</title>
+    <meta name="description" content="クリムゾンデザートのキャラクターを発見 - Kliff、Oongka、Yann、Naira、そしてグレイメイン傭兵団。彼らの背景、スキル、そしてPywelの壮大な物語での役割を学びましょう。">
+    <meta name="keywords" content="クリムゾンデザート キャラクター, Kliff, Oongka, Yann, Naira, グレイメイン, クリムゾンデザート ヒーロー, Pywel キャラクター">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crimson-desert.info/ja-JP/characters">
+    <meta property="og:title" content="クリムゾンデザート キャラクター - Pywelの英雄たち">
+    <meta property="og:description" content="クリムゾンデザートのキャラクターを発見 - Kliff、Oongka、Yann、Naira、そしてグレイメイン傭兵団。">
+    <meta property="og:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="クリムゾンデザート キャラクター - Pywelの英雄たち">
+    <meta name="twitter:description" content="クリムゾンデザートのキャラクターを発見 - Kliff、Oongka、Yann、Naira、そしてグレイメイン傭兵団。">
+    <meta name="twitter:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="apple-touch-icon" href="../static/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="2f565d4d2f56efdc" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://crimson-desert.info/ja-JP/characters">
+    
+    <!-- Language System -->
+    <script src="../static/js/language.js"></script>
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+    
+    <style>
+        .characters-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.90)), 
+                        url('../static/images/crimson-desert/02.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            color: var(--text-primary);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .characters-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .characters-hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .characters-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .character-section {
+            margin-bottom: 4rem;
+        }
+
+        .character-section h2 {
+            color: var(--accent-gold);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 1rem;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .character-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            overflow: hidden;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .character-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .character-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .character-role {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .character-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .character-skills {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .character-skills h4 {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .character-skills ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .character-skills ul li {
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .character-skills ul li::before {
+            content: '⚔';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .faction-section {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 4rem 0;
+        }
+
+        .faction-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faction-card h3 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faction-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .characters-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .characters-hero p {
+                font-size: 1.1rem;
+            }
+
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../static/logo.png" alt="クリムゾンデザート Logo" loading="eager" fetchpriority="high" width="200" height="60">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">ホーム</a></li>
+                    <li><a href="news.html" data-i18n="nav.news">ニュース</a></li>
+                    <li><a href="media.html" data-i18n="nav.media">メディア</a></li>
+                    <li><a href="guides.html" data-i18n="nav.guides">ガイド</a></li>
+                    <li><a href="characters.html" class="active" data-i18n="nav.characters">キャラクター</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="../characters.html">EN</a>
+                    <a href="../zh-CN/characters.html">中文</a>
+                    <a href="characters.html" class="active">日本語</a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">ホーム</a></li>
+                <li><a href="news.html" data-i18n="nav.news">ニュース</a></li>
+                <li><a href="media.html" data-i18n="nav.media">メディア</a></li>
+                <li><a href="guides.html" data-i18n="nav.guides">ガイド</a></li>
+                <li><a href="characters.html" data-i18n="nav.characters">キャラクター</a></li>
+            </ul>
+            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
+                <a href="../characters.html">EN</a>
+                <a href="../zh-CN/characters.html">中文</a>
+                <a href="characters.html" class="active">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl28292069.effectivegatecpm.com/c1022436be365ec29bf863fe4bce4351/invoke.js"
+        ></script>
+        <div id="container-c1022436be365ec29bf863fe4bce4351"></div>
+        <!-- Characters Hero -->
+        <section class="characters-hero">
+            <div class="container">
+                <h1>キャラクター</h1>
+                <p>クリムゾンデザートの英雄と主要人物を紹介します。彼らの背景、動機、そしてPywelの壮大な物語での役割を発見してください。</p>
+            </div>
+        </section>
+
+        <!-- Main Characters -->
+        <section class="characters-content">
+            <div class="container">
+                <div class="character-section">
+                    <h2>主要キャラクター</h2>
+                    <div class="character-grid">
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/04.jpg" alt="Kliff" class="character-image">
+                            <h3>Kliff</h3>
+                            <p class="character-role">グレイメイン傭兵団のリーダー</p>
+                            <p>Kliffはグレイメイン傭兵団の決意に満ちたリーダーです。ブラックベアによる壊滅的な待ち伏せで仲間が死に、Pywel各地に散らばった後、Kliffは生存者と再会し、失われたものを再建するための壮大な旅に出ます。揺るぎない決意を持つ熟練の戦士として、Kliffのリーダーシップと戦闘能力は、Pywelの支配をめぐる闘争において強力な力となっています。</p>
+                            <div class="character-skills">
+                                <h4>主要能力</h4>
+                                <ul>
+                                    <li>専門的な剣術と戦闘リーダーシップ</li>
+                                    <li>戦略的計画と戦術的意思決定</li>
+                                    <li>揺るぎない決意と回復力</li>
+                                    <li>散らばった同盟者を鼓舞し団結させる能力</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/05.jpg" alt="Oongka" class="character-image">
+                            <h3>Oongka</h3>
+                            <p class="character-role">グレイメインのメンバー</p>
+                            <p>Oongkaはグレイメイン傭兵団の忠実なメンバーで、その激しい戦闘スキルとKliffへの揺るぎない忠誠心で知られています。グレイメインへの残酷な攻撃を生き延びた熟練の戦士として、Oongkaはグループの再会と再建の努力において重要な役割を果たします。彼女の戦闘における専門知識とPywelの危険に対する深い理解は、グレイメインを回復するための探求において貴重な味方となっています。</p>
+                            <div class="character-skills">
+                                <h4>主要能力</h4>
+                                <ul>
+                                    <li>卓越した戦闘スキルと戦場での意識</li>
+                                    <li>Pywelの地形と危険に対する深い知識</li>
+                                    <li>グレイメインの大義への忠誠と献身</li>
+                                    <li>過酷な環境での生存の専門知識</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/06.jpg" alt="Yann" class="character-image">
+                            <h3>Yann</h3>
+                            <p class="character-role">グレイメインのメンバー</p>
+                            <p>Yannはグレイメイン傭兵団の機知に富み狡猾なメンバーで、Pywelの複雑な政治的風景をナビゲートする能力で知られています。鋭い心と迅速な思考により、Yannはグレイメインが直面する課題に対して戦略的な洞察と外交的解決策を提供します。様々な派閥とその動機に関する知識は、同盟を築き、紛争を回避する上で不可欠です。</p>
+                            <div class="character-skills">
+                                <h4>主要能力</h4>
+                                <ul>
+                                    <li>戦略的思考と政治的洞察力</li>
+                                    <li>外交交渉スキル</li>
+                                    <li>Pywelの派閥と政治に関する知識</li>
+                                    <li>資源収集と管理</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/07.jpg" alt="Naira" class="character-image">
+                            <h3>Naira</h3>
+                            <p class="character-role">グレイメインのメンバー</p>
+                            <p>Nairaは熟練の戦士であり、グレイメインの信頼できるメンバーで、戦闘における多才さとあらゆる状況に適応する能力で知られています。強力な敵に直面するか、危険な地形をナビゲートするかにかかわらず、Nairaのスキルと決意は、グループにとって貴重な資産となっています。彼女の勇気と最も危険な任務を引き受ける意欲は、グレイメインの大義への献身を示しています。</p>
+                            <div class="character-skills">
+                                <h4>主要能力</h4>
+                                <ul>
+                                    <li>多才な戦闘テクニックと適応性</li>
+                                    <li>複数の武器タイプの専門知識</li>
+                                    <li>危険に直面する勇気と意欲</li>
+                                    <li>チーム調整とサポート能力</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faction Information -->
+        <section class="faction-section">
+            <div class="container">
+                <h2 class="text-center mb-4">グレイメイン傭兵団</h2>
+                <div class="faction-card">
+                    <h3>グレイメイン傭兵団について</h3>
+                    <p>グレイメインは、かつて広大なPywel大陸で活動していた有名な傭兵団です。Kliffに率いられ、このグループはそのスキル、忠誠心、そして危険な任務を完了する有効性で知られていました。しかし、宿敵であるブラックベアによる壊滅的な待ち伏せにより、グレイメインは崩壊しました - メンバーは死に、またはPywel各地に散らばりました。</p>
+                    <p>今、Kliffと生存メンバーは再会し、倒れたグループを再建し、失われたものを取り戻さなければなりません。グレイメインの運命とPywelの未来は、彼らが前進する課題を克服し、彼らを破壊しようとする力に立ち向かう能力にかかっています。</p>
+                    <p>グレイメインは単なる傭兵団以上のものです - 彼らは忠誠、共有された経験、そして共通の目標によって結ばれた家族です。各メンバーはグループに独自のスキルと視点をもたらし、一人では決してできないほど強くしています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="../static/logo.png" alt="クリムゾンデザート Logo" loading="lazy" width="200" height="60">
+                    </div>
+                    <p>クリムゾンデザートのキャラクターと、Pywelを横断する彼らの壮大な旅を発見してください。Kliffとグレイメインに参加し、生存と救済の探求に参加してください。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>ナビゲーション</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">ホーム</a></li>
+                        <li><a href="news.html" data-i18n="nav.news">ニュース</a></li>
+                        <li><a href="media.html" data-i18n="nav.media">メディア</a></li>
+                        <li><a href="guides.html" data-i18n="nav.guides">ガイド</a></li>
+                        <li><a href="characters.html" data-i18n="nav.characters">キャラクター</a></li>
+                        <li><a href="../privacy-policy.html" data-i18n="nav.privacy">プライバシーポリシー</a></li>
+                        <li><a href="../terms-of-service.html" data-i18n="nav.terms">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>コミュニティ</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/crimsondesert" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/crimsondesert" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/crimsondesert" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/crimsondesert" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 クリムゾンデザート。全著作権所有。| Pywelの英雄を発見し、クリムゾンデザートでの彼らの壮大な物語を体験してください。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/base.js"></script>
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.character-card, .faction-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色沙漠 - 开放世界动作冒险 | 官方网站</title>
+    <meta name="description" content="Crimson Desert launches March 19, 2026! Experience epic open-world action adventure, explore the vast continent of Pywel, and join Kliff and the Greymanes in their quest. Discover the story of Crimson Desert, an open-world action adventure game by Pearl Abyss.">
+    <meta name="keywords" content="Crimson Desert, Crimson Desert game, open-world action adventure, Pearl Abyss, Pywel, Kliff, Greymanes, Crimson Desert release date, Crimson Desert 2026, action RPG, open world game">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crimson-desert.info/">
+    <meta property="og:title" content="Crimson Desert - Open-World Action Adventure | Official Website">
+    <meta property="og:description" content="Crimson Desert launches March 19, 2026! Experience epic open-world action adventure in the vast continent of Pywel.">
+    <meta property="og:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crimson Desert - Open-World Action Adventure">
+    <meta name="twitter:description" content="Crimson Desert launches March 19, 2026! Experience epic open-world action adventure in the vast continent of Pywel.">
+    <meta name="twitter:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="apple-touch-icon" href="../static/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="2f565d4d2f56efdc" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://crimson-desert.info/">
+    
+    <!-- Language System -->
+    <script src="../static/js/language.js"></script>
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+
+    <style>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(45, 45, 45, 0.7)),
+                        url('../static/images/crimson-desert/01.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-primary);
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.4), rgba(45, 45, 45, 0.3));
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.5);
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+        }
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            color: var(--text-secondary);
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 3rem;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent-gold);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 4;
+            margin-top: 2rem;
+        }
+
+        .countdown-container h2 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+
+        .countdown {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .countdown-item {
+            text-align: center;
+            min-width: 120px;
+            position: relative;
+        }
+
+        .countdown-item:not(:last-child)::after {
+            content: ':';
+            position: absolute;
+            right: -1.8rem;
+            top: 50%;
+            transform: translateY(-60%);
+            color: var(--accent-gold);
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 1);
+        }
+
+        .countdown-item span {
+            font-size: 4rem;
+            font-weight: 900;
+            display: block;
+            color: var(--accent-gold);
+            text-shadow: 0 0 15px rgba(212, 175, 55, 1), 0 0 30px rgba(212, 175, 55, 0.5);
+            font-family: 'Courier New', monospace;
+            background: rgba(26, 26, 26, 0.6);
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .countdown-item label {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Game Introduction */
+        .introduction {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .video-container {
+            margin: 3rem auto;
+            max-width: 900px;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .game-info {
+            margin-top: 3rem;
+            text-align: left;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-info h3, .game-info h4 {
+            color: var(--accent-gold);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-info h3 {
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .game-info h4 {
+            font-size: 1.4rem;
+        }
+
+        .game-info p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--secondary-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Screenshots Gallery */
+        .screenshots {
+            background: var(--secondary-bg);
+            padding: 5rem 0;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 2px solid var(--border-color);
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .screenshot-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .screenshot-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.95);
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--text-primary);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color var(--transition-normal);
+            z-index: 10000;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-gold);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--secondary-bg);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background var(--transition-normal);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            background: rgba(26, 26, 26, 0.5);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+                padding: 150px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .countdown {
+                gap: 1.5rem;
+            }
+
+            .countdown-item {
+                min-width: 80px;
+            }
+
+            .countdown-item span {
+                font-size: 2.5rem;
+            }
+
+            .countdown-item:not(:last-child)::after {
+                right: -1rem;
+                font-size: 2rem;
+            }
+
+            .countdown-item label {
+                font-size: 0.9rem;
+            }
+
+            .countdown-container {
+                padding: 2rem;
+            }
+
+            .countdown-container h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .countdown {
+                gap: 1rem;
+            }
+
+            .countdown-item {
+                min-width: 60px;
+            }
+
+            .countdown-item span {
+                font-size: 2rem;
+            }
+
+            .countdown-item label {
+                font-size: 0.8rem;
+            }
+
+            .countdown-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../static/logo.png" alt="红色沙漠 Logo">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" class="active" data-i18n="nav.home">首页</a></li>
+                    <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+                    <li><a href="media.html" data-i18n="nav.media">媒体</a></li>
+                    <li><a href="guides.html" data-i18n="nav.guides">攻略</a></li>
+                    <li><a href="characters.html" data-i18n="nav.characters">角色</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="../">EN</a>
+                    <a href="index.html" class="active">中文</a>
+                    <a href="../ja-JP/">日本語</a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/news" data-i18n="nav.news">News</a></li>
+                <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+            </ul>
+            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
+                <a href="../">EN</a>
+                <a href="index.html" class="active">中文</a>
+                <a href="../ja-JP/">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl28292069.effectivegatecpm.com/c1022436be365ec29bf863fe4bce4351/invoke.js"
+        ></script>
+        <div id="container-c1022436be365ec29bf863fe4bce4351"></div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>红色沙漠</h1>
+                    <p class="subtitle">佣兵们惨烈的史诗故事 - 开放世界动作冒险</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">2026年第一季度发布</p>
+                    <div class="countdown-container">
+                        <h2>正式发布倒计时 - 2026年3月19日</h2>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <label>天</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <label>小时</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <label>分钟</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <label>秒</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Introduction -->
+        <section class="introduction">
+            <div class="container">
+                <h2>体验红色沙漠 - 终极开放世界动作冒险</h2>
+                <p><strong>红色沙漠</strong>将于<strong>2026年第一季度</strong>发布，以其创新的游戏机制、令人惊叹的视觉效果和沉浸式叙事，彻底改变开放世界动作冒险游戏类型。加入全球玩家，在广阔的帕卫尔大陆上展开史诗般的冒险，在这里，动作与探索以最真实的方式相遇。<strong>红色沙漠</strong>提供无与伦比的游戏体验，将激烈的战斗与深度探索相结合，使其成为寻求史诗冒险的玩家的终极开放世界动作冒险游戏。<strong>红色沙漠</strong>在2026年第一季度的备受期待的发布标志着开放世界游戏的新纪元。由《黑色沙漠Online》的创造者Pearl Abyss开发，<strong>红色沙漠</strong>承诺在一个充满危险、神秘和冒险的精美世界中提供丰富的叙事体验。</p>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-D86NcserWk?si=wTReyM6GuCcOXmkz" title="Crimson Desert Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="game-info">
+                    <h3>关于红色沙漠</h3>
+                    <p><strong>红色沙漠</strong>是一款突破性的开放世界动作冒险游戏，在沉浸式单人体验中将激烈的战斗与深度探索相结合。故事设定在广阔的帕卫尔大陆，玩家扮演灰鬃团佣兵团的领袖克里夫，踏上史诗般的旅程，与失散的战友重聚，重建失去的一切。帕卫尔的命运现在掌握在能够在这个精美世界中掌握战斗、探索和生存艺术的熟练冒险家手中。<strong>红色沙漠</strong>为玩家提供了体验真实开放世界游戏玩法、动态战斗系统和丰富叙事的机会，这些内容在多样化的景观和具有挑战性的遭遇中展开。</p>
+                    
+                    <h4>故事与背景</h4>
+                    <p>在<strong>红色沙漠</strong>中，玩家跟随克里夫和灰鬃团的故事，这是一个面临宿敌黑熊毁灭性伏击的佣兵团。在一场残酷的夜间袭击导致灰鬃团成员死亡或分散在帕卫尔各地后，克里夫决心与幸存者重聚，重建倒下的灰鬃团，并夺回失去的一切。游戏具有丰富的叙事，不同的派系为争夺宝贵领土和神秘力量的控制权而竞争。<strong>红色沙漠</strong>中的每个决定都至关重要，因为联盟的建立、危险的涌现和神秘派系的揭露。<strong>红色沙漠</strong>的世界充满了政治阴谋、史诗般的战斗，以及在因战争和野心而分裂的土地上不断为生存而斗争。当克里夫穿越帕卫尔时，他将意识到一个前所未有的威胁和一段远超他想象的命运正在等待着他。</p>
+                    
+                    <h4>发布信息</h4>
+                    <p><strong>红色沙漠</strong>计划于<strong>2026年3月19日</strong>正式发布。游戏将在PC（Steam）、PlayStation 5和Xbox Series X/S平台上提供。<strong>红色沙漠</strong>将采用为次世代主机优化的令人惊叹的图形，让玩家能够以令人惊叹的细节体验广阔的帕卫尔世界。Pearl Abyss的开发团队正在努力确保<strong>红色沙漠</strong>在2026年3月19日发布时提供精致而令人兴奋的体验。<strong>红色沙漠</strong>的预购现已开放，提供独家奖励和特殊内容的早期访问。</p>
+                    
+                    <h4>Supported Languages</h4>
+                    <p><strong>Crimson Desert</strong> supports multiple languages including English, French, German, Spanish, Italian, Portuguese, Russian, Japanese, Chinese (Simplified & Traditional), and Korean, ensuring players worldwide can enjoy the full experience with proper localization. The comprehensive language support in <strong>Crimson Desert</strong> makes it accessible to a global audience, fostering an international community of open-world adventure enthusiasts who can fully immerse themselves in the epic tale of Kliff and the Greymanes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play -->
+        <section class="features">
+            <div class="container">
+                <h2>如何游玩红色沙漠</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>探索广阔世界</h3>
+                        <p>在<strong>红色沙漠</strong>中踏上穿越无缝开放世界帕卫尔的史诗旅程。发现多样化的景观，从茂密的森林到干旱的沙漠，每个地方都充满了秘密、宝藏和挑战。探索古代遗迹、隐藏的洞穴和神秘的地点，这些地方讲述了帕卫尔丰富的历史故事。<strong>红色沙漠</strong>的世界等待您去探索，无数命运等待着您的发现。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>掌握战斗系统</h3>
+                        <p>在<strong>红色沙漠</strong>中参与激烈、真实的战斗，这需要技巧和策略。掌握各种武器和战斗风格，从迅捷的剑术到强大的魔法。利用不同的武器、技能和能力创造您独特的战斗风格。在<strong>红色沙漠</strong>中取得成功需要快速反应和战术思维，因为您将面对多样化的敌人和具有挑战性的遭遇。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>体验故事</h3>
+                        <p>跟随克里夫和灰鬃团的史诗故事，看他们如何在<strong>红色沙漠</strong>中努力重聚和重建。体验充满难忘角色、戏剧性时刻和有意义选择的丰富叙事。您在<strong>红色沙漠</strong>中做出的每个决定都会塑造您的旅程并影响周围的世界。<strong>红色沙漠</strong>的故事通过电影般的过场动画、引人入胜的对话和沉浸式游戏玩法展开，将帕卫尔的世界带入生活。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>面对史诗挑战</h3>
+                        <p>在<strong>红色沙漠</strong>中遭遇强大的敌人、巨大的生物和具有挑战性的头目战斗。与需要策略、时机和战斗机制掌握的强大敌人测试您的技能。发现隐藏的宝藏，解锁新能力，并在充满危险和机遇的世界中前进。<strong>红色沙漠</strong>中的挑战奖励探索和战斗能力，提供令人满意的进度系统，让您在整个冒险过程中保持参与。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Screenshots -->
+        <section class="screenshots">
+            <div class="container">
+                <h2>红色沙漠游戏画廊</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">探索<strong>红色沙漠</strong>令人惊叹的视觉效果，展示史诗般的开放世界冒险、帕卫尔的多样化景观以及当游戏于2026年3月19日发布时等待您的激烈战斗。这些截图捕捉了使<strong>红色沙漠</strong>成为革命性开放世界动作冒险体验的精髓。</p>
+                <div class="screenshot-grid">
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/01.jpg">
+                        <img src="../static/images/crimson-desert/01.jpg" alt="Crimson Desert epic open-world adventure scene, launching March 19, 2026">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/02.jpg">
+                        <img src="../static/images/crimson-desert/02.jpg" alt="Crimson Desert vast landscape of Pywel continent, March 19, 2026 release">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/03.jpg">
+                        <img src="../static/images/crimson-desert/03.jpg" alt="Crimson Desert intense combat showcasing action adventure gameplay">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/04.jpg">
+                        <img src="../static/images/crimson-desert/04.jpg" alt="Crimson Desert character Kliff and Greymanes in action">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/05.jpg">
+                        <img src="../static/images/crimson-desert/05.jpg" alt="Crimson Desert exploration and adventure in Pywel">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/06.jpg">
+                        <img src="../static/images/crimson-desert/06.jpg" alt="Crimson Desert key art showcasing the game's stunning graphics, March 19, 2026">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/07.jpg">
+                        <img src="../static/images/crimson-desert/07.jpg" alt="Crimson Desert epic battles and combat sequences">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/08.jpg">
+                        <img src="../static/images/crimson-desert/08.jpg" alt="Crimson Desert beautiful world design and environments">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2>关于红色沙漠的常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">什么是红色沙漠，它什么时候发布？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>是一款史诗般的开放世界动作冒险游戏，在沉浸式单人体验中将激烈的战斗与深度探索相结合。游戏计划于<strong>2026年3月19日</strong>正式发布，将在PC（Steam）、PlayStation 5和Xbox Series X/S平台上提供。玩家将体验终极开放世界冒险，拥有真实的战斗机制、广阔的探索和丰富的叙事。2026年3月19日发布的<strong>红色沙漠</strong>标志着开放世界游戏爱好者的激动人心的里程碑。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">红色沙漠将在2026年3月19日发布时在哪些平台上提供？</div>
+                        <div class="faq-answer">当<strong>红色沙漠</strong>于<strong>2026年3月19日</strong>发布时，它将在PC（Steam）、PlayStation 5和Xbox Series X/S上提供。游戏将采用为次世代主机优化的令人惊叹的图形，让玩家能够以令人惊叹的细节体验广阔的帕卫尔世界。这确保了<strong>红色沙漠</strong>社区可以在2026年3月19日发布时在他们首选的平台上享受游戏。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">红色沙漠的故事是什么？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>跟随克里夫和灰鬃团的故事，这是一个面临宿敌黑熊毁灭性伏击的佣兵团。在一场残酷的夜间袭击导致灰鬃团成员死亡或分散在帕卫尔各地后，克里夫决心与幸存者重聚，重建倒下的灰鬃团，并夺回失去的一切。<strong>红色沙漠</strong>的故事随着克里夫穿越大陆、建立联盟、面对危险和揭露神秘派系而展开。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">红色沙漠是单人游戏还是多人游戏？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>主要是一款单人开放世界动作冒险游戏。玩家将通过沉浸式单人战役体验克里夫和灰鬃团的史诗故事。游戏专注于在精美制作的开放世界中提供丰富的叙事体验、激烈的战斗和广阔的探索。<strong>红色沙漠</strong>的单人性质允许专注于叙事体验和深度角色发展。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">红色沙漠与其他开放世界游戏有什么不同？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>将激烈的战斗与深度探索相结合，具有无缝开放世界、动态战斗系统和在多样化景观中展开的丰富叙事。游戏对动作和叙事的关注使其与传统开放世界游戏区别开来，提供更沉浸式和电影般的体验。<strong>红色沙漠</strong>的世界充满了危险、神秘和冒险，创造了独特的开放世界动作冒险体验。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">红色沙漠具有什么样的战斗系统？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>具有激烈、真实的战斗系统，需要技巧和策略。玩家可以掌握各种武器和战斗风格，从迅捷的剑术到强大的魔法。<strong>红色沙漠</strong>中的战斗节奏快且残酷，每次攻击和移动都可能决定您的命运。游戏允许玩家通过利用不同的武器、技能和能力创造自己独特的战斗风格。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">谁在开发红色沙漠？</div>
+                        <div class="faq-answer"><strong>红色沙漠</strong>由《黑色沙漠Online》的创造者Pearl Abyss开发。Pearl Abyss以创造具有深度游戏机制的视觉震撼游戏而闻名。开发团队正在努力确保<strong>红色沙漠</strong>在2026年3月19日发布时提供精致而令人兴奋的体验。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">我可以预购红色沙漠吗？</div>
+                        <div class="faq-answer">是的！<strong>红色沙漠</strong>的预购现已开放。预购游戏将让您获得独家奖励和特殊内容。预购可在所有平台上进行，包括PC（Steam）、PlayStation 5和Xbox Series X/S。<strong>红色沙漠</strong>的预购奖励包括独家物品和特殊内容的早期访问。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                <div class="logo">
+                    <img src="../static/logo.png" alt="红色沙漠 Logo">
+                </div>
+                    <p>在红色沙漠中体验终极开放世界动作冒险。探索广阔的帕卫尔大陆，加入克里夫和灰鬃团的史诗任务。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>导航</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="news.html">新闻</a></li>
+                        <li><a href="media.html">媒体</a></li>
+                        <li><a href="guides.html">攻略</a></li>
+                        <li><a href="characters.html">角色</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>社区</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/crimsondesert" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/crimsondesert" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/crimsondesert" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/crimsondesert" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 红色沙漠。保留所有权利。| 探索广阔的帕卫尔世界，在红色沙漠中体验终极开放世界动作冒险。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/base.js"></script>
+    <script>
+        // Countdown Timer - March 19, 2026
+        const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
+
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector(".countdown").innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
+            }
+        }, 1000);
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const screenshotItems = document.querySelectorAll('.screenshot-item');
+
+        screenshotItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-src');
+                lightboxImg.src = imgSrc;
+                lightboxImg.alt = item.querySelector('img').alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .faq-item, .screenshot-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

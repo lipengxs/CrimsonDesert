@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリムゾンデザート - オープンワールドアクションアドベンチャー | 公式サイト</title>
+    <meta name="description" content="Crimson Desert launches March 19, 2026! Experience epic open-world action adventure, explore the vast continent of Pywel, and join Kliff and the Greymanes in their quest. Discover the story of Crimson Desert, an open-world action adventure game by Pearl Abyss.">
+    <meta name="keywords" content="Crimson Desert, Crimson Desert game, open-world action adventure, Pearl Abyss, Pywel, Kliff, Greymanes, Crimson Desert release date, Crimson Desert 2026, action RPG, open world game">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crimson-desert.info/">
+    <meta property="og:title" content="Crimson Desert - Open-World Action Adventure | Official Website">
+    <meta property="og:description" content="Crimson Desert launches March 19, 2026! Experience epic open-world action adventure in the vast continent of Pywel.">
+    <meta property="og:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crimson Desert - Open-World Action Adventure">
+    <meta name="twitter:description" content="Crimson Desert launches March 19, 2026! Experience epic open-world action adventure in the vast continent of Pywel.">
+    <meta name="twitter:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="apple-touch-icon" href="../static/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="2f565d4d2f56efdc" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://crimson-desert.info/">
+    
+    <!-- Language System -->
+    <script src="../static/js/language.js"></script>
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+
+    <style>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(45, 45, 45, 0.7)),
+                        url('../static/images/crimson-desert/01.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-primary);
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.4), rgba(45, 45, 45, 0.3));
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.5);
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+        }
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            color: var(--text-secondary);
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 3rem;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent-gold);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 4;
+            margin-top: 2rem;
+        }
+
+        .countdown-container h2 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+
+        .countdown {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .countdown-item {
+            text-align: center;
+            min-width: 120px;
+            position: relative;
+        }
+
+        .countdown-item:not(:last-child)::after {
+            content: ':';
+            position: absolute;
+            right: -1.8rem;
+            top: 50%;
+            transform: translateY(-60%);
+            color: var(--accent-gold);
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 1);
+        }
+
+        .countdown-item span {
+            font-size: 4rem;
+            font-weight: 900;
+            display: block;
+            color: var(--accent-gold);
+            text-shadow: 0 0 15px rgba(212, 175, 55, 1), 0 0 30px rgba(212, 175, 55, 0.5);
+            font-family: 'Courier New', monospace;
+            background: rgba(26, 26, 26, 0.6);
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .countdown-item label {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Game Introduction */
+        .introduction {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .video-container {
+            margin: 3rem auto;
+            max-width: 900px;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .game-info {
+            margin-top: 3rem;
+            text-align: left;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-info h3, .game-info h4 {
+            color: var(--accent-gold);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-info h3 {
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .game-info h4 {
+            font-size: 1.4rem;
+        }
+
+        .game-info p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--secondary-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Screenshots Gallery */
+        .screenshots {
+            background: var(--secondary-bg);
+            padding: 5rem 0;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 2px solid var(--border-color);
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .screenshot-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .screenshot-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.95);
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--text-primary);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color var(--transition-normal);
+            z-index: 10000;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-gold);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--secondary-bg);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background var(--transition-normal);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            background: rgba(26, 26, 26, 0.5);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+                padding: 150px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .countdown {
+                gap: 1.5rem;
+            }
+
+            .countdown-item {
+                min-width: 80px;
+            }
+
+            .countdown-item span {
+                font-size: 2.5rem;
+            }
+
+            .countdown-item:not(:last-child)::after {
+                right: -1rem;
+                font-size: 2rem;
+            }
+
+            .countdown-item label {
+                font-size: 0.9rem;
+            }
+
+            .countdown-container {
+                padding: 2rem;
+            }
+
+            .countdown-container h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .countdown {
+                gap: 1rem;
+            }
+
+            .countdown-item {
+                min-width: 60px;
+            }
+
+            .countdown-item span {
+                font-size: 2rem;
+            }
+
+            .countdown-item label {
+                font-size: 0.8rem;
+            }
+
+            .countdown-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../static/logo.png" alt="Crimson Desert Logo">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" class="active" data-i18n="nav.home">ホーム</a></li>
+                    <li><a href="news.html" data-i18n="nav.news">ニュース</a></li>
+                    <li><a href="media.html" data-i18n="nav.media">メディア</a></li>
+                    <li><a href="guides.html" data-i18n="nav.guides">ガイド</a></li>
+                    <li><a href="characters.html" data-i18n="nav.characters">キャラクター</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="../">EN</a>
+                    <a href="../zh-CN/">中文</a>
+                    <a href="index.html" class="active">日本語</a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/news" data-i18n="nav.news">News</a></li>
+                <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+            </ul>
+            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
+                <a href="../">EN</a>
+                <a href="../zh-CN/">中文</a>
+                <a href="index.html" class="active">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl28292069.effectivegatecpm.com/c1022436be365ec29bf863fe4bce4351/invoke.js"
+        ></script>
+        <div id="container-c1022436be365ec29bf863fe4bce4351"></div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>クリムゾンデザート</h1>
+                    <p class="subtitle">血で書かれた叙事詩 - オープンワールドアクションアドベンチャー</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">2026年3月19日リリース予定</p>
+                    <div class="countdown-container">
+                        <h2>正式リリースカウントダウン - 2026年3月19日</h2>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <label>日</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <label>時間</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <label>分</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <label>秒</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Introduction -->
+        <section class="introduction">
+            <div class="container">
+                <h2>クリムゾンデザートを体験 - 究極のオープンワールドアクションアドベンチャー</h2>
+                <p><strong>クリムゾンデザート</strong>は<strong>2026年3月19日</strong>にリリース予定で、革新的なゲームプレイメカニクス、驚くべきビジュアル、没入感のあるストーリーテリングにより、オープンワールドアクションアドベンチャージャンルに革命をもたらします。広大なパイウェル大陸を舞台にしたこの壮大な冒険に、世界中のプレイヤーが参加します。ここでは、アクションと探索が最も本格的な方法で融合しています。<strong>クリムゾンデザート</strong>は、激しい戦闘と深い探索を組み合わせた比類のないゲーム体験を提供し、壮大な冒険を求めるプレイヤーにとって決定的なオープンワールドアクションアドベンチャーゲームとなります。2026年3月19日の<strong>クリムゾンデザート</strong>の待望のリリースは、オープンワールドゲーミングの新時代を画するものです。Black Desert Onlineの創造者であるPearl Abyssが開発した<strong>クリムゾンデザート</strong>は、危険、神秘、冒険に満ちた美しく作られた世界で、豊かな物語体験を提供することを約束します。</p>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-D86NcserWk?si=wTReyM6GuCcOXmkz" title="Crimson Desert Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="game-info">
+                    <h3>クリムゾンデザートについて</h3>
+                    <p><strong>クリムゾンデザート</strong>は、没入感のあるシングルプレイヤー体験で、激しい戦闘と深い探索を組み合わせた画期的なオープンワールドアクションアドベンチャーゲームです。広大なパイウェル大陸を舞台に、プレイヤーは傭兵団グレイメインズのリーダーであるクリフの役割を担い、散り散りになった仲間と再会し、失われたものを再建するための壮大な旅に出ます。パイウェルの運命は、この美しく作られた世界で戦闘、探索、生存の技術をマスターできる熟練の冒険者の手に委ねられています。<strong>クリムゾンデザート</strong>は、本格的なオープンワールドゲームプレイ、ダイナミックな戦闘システム、多様な風景と挑戦的な遭遇を通じて展開する豊かな物語を体験する機会をプレイヤーに提供します。</p>
+                    
+                    <h4>ストーリーと背景</h4>
+                    <p><strong>クリムゾンデザート</strong>では、プレイヤーはクリフとグレイメインズの物語を追います。グレイメインズは宿敵であるブラックベアーズによる壊滅的な待ち伏せに直面する傭兵団です。残酷な夜間攻撃により、グレイメインズのメンバーが死んだり、パイウェル各地に散り散りになった後、クリフは生存者と再会し、倒れたグレイメインズを再建し、失われたものを取り戻すことを決意します。このゲームは、異なる派閥が貴重な領土と神秘的な力の支配を争う豊かな物語を特徴としています。<strong>クリムゾンデザート</strong>の各決定には重みがあり、同盟が結ばれ、危険が満ち、神秘的な派閥が明らかになります。<strong>クリムゾンデザート</strong>の世界は、政治的陰謀、壮大な戦い、戦争と野心によって引き裂かれた土地での生存のための絶え間ない闘争に満ちています。クリフがパイウェルを旅する中で、前例のない脅威と、彼が想像していたよりも大きな運命が待っていることに気づくでしょう。</p>
+                    
+                    <h4>リリース情報</h4>
+                    <p><strong>クリムゾンデザート</strong>は<strong>2026年3月19日</strong>に正式リリース予定です。ゲームはPC（Steam）、PlayStation 5、Xbox Series X/Sプラットフォームで利用可能になります。<strong>クリムゾンデザート</strong>は、次世代コンソール向けに最適化された驚くべきグラフィックを特徴とし、プレイヤーが息を呑むような詳細で広大なパイウェルの世界を体験できるようにします。Pearl Abyssの開発チームは、2026年3月19日のリリース時に<strong>クリムゾンデザート</strong>が洗練された刺激的な体験を提供するよう、熱心に取り組んでいます。<strong>クリムゾンデザート</strong>の予約注文は現在利用可能で、限定ボーナスと特別コンテンツへの早期アクセスを提供します。</p>
+                    
+                    <h4>Supported Languages</h4>
+                    <p><strong>Crimson Desert</strong> supports multiple languages including English, French, German, Spanish, Italian, Portuguese, Russian, Japanese, Chinese (Simplified & Traditional), and Korean, ensuring players worldwide can enjoy the full experience with proper localization. The comprehensive language support in <strong>Crimson Desert</strong> makes it accessible to a global audience, fostering an international community of open-world adventure enthusiasts who can fully immerse themselves in the epic tale of Kliff and the Greymanes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play -->
+        <section class="features">
+            <div class="container">
+                <h2>クリムゾンデザートの遊び方</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>広大な世界を探索</h3>
+                        <p><strong>クリムゾンデザート</strong>で、シームレスなオープンワールドであるパイウェルを横断する壮大な旅に出発しましょう。豊かな森から乾燥した砂漠まで、多様な風景を発見し、それぞれが秘密、宝物、挑戦に満ちています。パイウェルの豊かな歴史を語る古代遺跡、隠された洞窟、神秘的な場所を探索してください。<strong>クリムゾンデザート</strong>の世界は探索する価値があり、無数の運命があなたの発見を待っています。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>戦闘システムをマスター</h3>
+                        <p><strong>クリムゾンデザート</strong>では、技術と戦略の両方を必要とする激しく生々しい戦闘に参加します。迅速な剣術から強力な魔法まで、様々な武器と戦闘スタイルをマスターしてください。異なる武器、スキル、能力を活用して、独自の戦闘スタイルを作り出します。<strong>クリムゾンデザート</strong>での成功には、多様な敵や挑戦的な遭遇に直面する際に、迅速な反射神経と戦術的思考の両方が必要です。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>ストーリーを体験</h3>
+                        <p><strong>クリムゾンデザート</strong>で、クリフとグレイメインズが再会し、再建を目指して奮闘する壮大な物語を追います。記憶に残るキャラクター、劇的な瞬間、意味のある選択に満ちた豊かな物語を体験してください。<strong>クリムゾンデザート</strong>で行う各決定は、あなたの旅を形作り、周囲の世界に影響を与えます。<strong>クリムゾンデザート</strong>の物語は、映画的なカットシーン、魅力的な対話、パイウェルの世界を生き生きとさせる没入感のあるゲームプレイを通じて展開します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>壮大な挑戦に直面</h3>
+                        <p><strong>クリムゾンデザート</strong>で、強力な敵、巨大な生物、挑戦的なボス戦に遭遇します。戦略、タイミング、戦闘メカニクスの習得を必要とする強敵に対してスキルを試してください。隠された宝物を発見し、新しい能力を解除し、危険と機会に満ちた世界を進んでください。<strong>クリムゾンデザート</strong>の挑戦は、探索と戦闘能力の両方を報酬とし、冒険全体を通じてあなたを魅了し続ける満足のいく進行システムを提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Screenshots -->
+        <section class="screenshots">
+            <div class="container">
+                <h2>クリムゾンデザートゲームギャラリー</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Explore stunning visuals from <strong>Crimson Desert</strong>, showcasing the epic open-world adventure, diverse landscapes of Pywel, and intense combat that await you when the game launches on March 19, 2026. These screenshots capture the essence of what makes <strong>Crimson Desert</strong> a revolutionary open-world action adventure experience.</p>
+                <div class="screenshot-grid">
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/01.jpg">
+                        <img src="../static/images/crimson-desert/01.jpg" alt="Crimson Desert epic open-world adventure scene, launching March 19, 2026">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/02.jpg">
+                        <img src="../static/images/crimson-desert/02.jpg" alt="Crimson Desert vast landscape of Pywel continent, March 19, 2026 release">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/03.jpg">
+                        <img src="../static/images/crimson-desert/03.jpg" alt="Crimson Desert intense combat showcasing action adventure gameplay">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/04.jpg">
+                        <img src="../static/images/crimson-desert/04.jpg" alt="Crimson Desert character Kliff and Greymanes in action">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/05.jpg">
+                        <img src="../static/images/crimson-desert/05.jpg" alt="Crimson Desert exploration and adventure in Pywel">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/06.jpg">
+                        <img src="../static/images/crimson-desert/06.jpg" alt="Crimson Desert key art showcasing the game's stunning graphics, March 19, 2026">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/07.jpg">
+                        <img src="../static/images/crimson-desert/07.jpg" alt="Crimson Desert epic battles and combat sequences">
+                    </div>
+                    <div class="screenshot-item" data-src="../static/images/crimson-desert/08.jpg">
+                        <img src="../static/images/crimson-desert/08.jpg" alt="Crimson Desert beautiful world design and environments">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2>クリムゾンデザートに関するよくある質問</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">What is Crimson Desert and when will it be released?</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> is an epic open-world action adventure game that combines intense combat with deep exploration in an immersive single-player experience. The game is scheduled for official release on <strong>March 19, 2026</strong> and will be available on PC (Steam), PlayStation 5, and Xbox Series X/S platforms. Players will experience the ultimate open-world adventure with authentic combat mechanics, vast exploration, and a rich narrative. The March 19, 2026 release of <strong>Crimson Desert</strong> marks an exciting milestone for open-world gaming enthusiasts.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What platforms will Crimson Desert be available on at launch on March 19, 2026?</div>
+                        <div class="faq-answer">When <strong>Crimson Desert</strong> launches on <strong>March 19, 2026</strong>, it will be available on PC (Steam), PlayStation 5, and Xbox Series X/S. The game will feature stunning graphics optimized for next-generation consoles, allowing players to experience the vast world of Pywel in breathtaking detail. This ensures that the <strong>Crimson Desert</strong> community can enjoy the game on their preferred platform when the March 19, 2026 release arrives.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What is the story of Crimson Desert?</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> follows the story of Kliff and the Greymanes, a mercenary group that faces a devastating ambush by their sworn enemies, the Black Bears. After a brutal night attack leaves members of the Greymanes dead or scattered across Pywel, Kliff is determined to reunite with the survivors, rebuild the fallen Greymanes, and reclaim what was lost. The story of <strong>Crimson Desert</strong> unfolds as Kliff journeys across the continent, forging alliances, facing dangers, and uncovering mysterious factions.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is Crimson Desert a single-player or multiplayer game?</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> is primarily a single-player open-world action adventure game. Players will experience the epic story of Kliff and the Greymanes through an immersive single-player campaign. The game focuses on delivering a rich narrative experience, intense combat, and vast exploration in a beautifully crafted open world. The single-player nature of <strong>Crimson Desert</strong> allows for a focused storytelling experience and deep character development.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What makes Crimson Desert different from other open-world games?</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> combines intense combat with deep exploration, featuring a seamless open world, dynamic combat systems, and a rich narrative that unfolds across diverse landscapes. The game's focus on both action and storytelling sets it apart from traditional open-world games, offering a more immersive and cinematic experience. The world of <strong>Crimson Desert</strong> is filled with danger, mystery, and adventure, creating a unique open-world action adventure experience.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What kind of combat system does Crimson Desert feature?</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> features an intense, visceral combat system that requires both skill and strategy. Players can master a variety of weapons and combat styles, from swift swordplay to powerful magic. The combat in <strong>Crimson Desert</strong> is fast-paced and brutal, with each strike and move potentially deciding your fate. The game allows players to create their own unique fighting style by utilizing different weapons, skills, and abilities.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Who is developing Crimson Desert?</div>
+                        <div class="faq-answer"><strong>Crimson Desert</strong> is being developed by Pearl Abyss, the creators of Black Desert Online. Pearl Abyss is known for creating visually stunning games with deep gameplay mechanics. The development team is working diligently to ensure <strong>Crimson Desert</strong> delivers a polished and exciting experience when it launches on March 19, 2026.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I pre-order Crimson Desert?</div>
+                        <div class="faq-answer">Yes! Pre-orders for <strong>Crimson Desert</strong> are now available. Pre-ordering the game will give you access to exclusive bonuses and special content. Pre-orders are available on all platforms including PC (Steam), PlayStation 5, and Xbox Series X/S. The pre-order bonuses for <strong>Crimson Desert</strong> include exclusive items and early access to special content.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                <div class="logo">
+                    <img src="../static/logo.png" alt="Crimson Desert Logo">
+                </div>
+                    <p>Experience the ultimate open-world action adventure in Crimson Desert. Explore the vast continent of Pywel and join Kliff and the Greymanes in their epic quest.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="/news" data-i18n="nav.news">News</a></li>
+                        <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                        <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                        <li><a href="/privacy-policy" data-i18n="nav.privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" data-i18n="nav.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/crimsondesert" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/crimsondesert" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/crimsondesert" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/crimsondesert" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 クリムゾンデザート。全著作権所有。| 広大なパイウェルの世界を探索し、クリムゾンデザートで究極のオープンワールドアクションアドベンチャーを体験してください。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/base.js"></script>
+    <script>
+        // Countdown Timer - March 19, 2026
+        const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
+
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector(".countdown").innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
+            }
+        }, 1000);
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const screenshotItems = document.querySelectorAll('.screenshot-item');
+
+        screenshotItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-src');
+                lightboxImg.src = imgSrc;
+                lightboxImg.alt = item.querySelector('img').alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .faq-item, .screenshot-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

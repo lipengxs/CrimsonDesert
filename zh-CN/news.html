@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Desert News - Latest Updates & Announcements</title>
+    <meta name="description" content="Stay updated with the latest Crimson Desert news, announcements, events, and updates. Get the newest information about open-world action adventure, game updates, and community events in Crimson Desert.">
+    <meta name="keywords" content="Crimson Desert news, Crimson Desert updates, Crimson Desert announcements, Crimson Desert events, open-world action adventure news, Crimson Desert latest info">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crimson-desert.info/news">
+    <meta property="og:title" content="Crimson Desert News - Latest Updates & Announcements">
+    <meta property="og:description" content="Stay updated with the latest Crimson Desert news, announcements, events, and updates.">
+    <meta property="og:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crimson Desert News - Latest Updates & Announcements">
+    <meta name="twitter:description" content="Stay updated with the latest Crimson Desert news, announcements, events, and updates.">
+    <meta name="twitter:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="apple-touch-icon" href="../static/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="2f565d4d2f56efdc" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://crimson-desert.info/news">
+    
+    <!-- Language System -->
+    <script src="../static/js/language.js"></script>
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+    
+    <style>
+        .news-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.90)), 
+                        url('../static/images/crimson-desert/02.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-primary);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .news-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .news-hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .news-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .news-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .news-tab {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-tab.active,
+        .news-tab:hover {
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+        }
+
+        .news-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .news-item {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .news-item-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .news-category {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .news-title {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+
+        .news-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .news-item-content {
+            padding: 1rem 2rem 2rem;
+        }
+
+        .news-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            filter: brightness(1.05) saturate(1.1) contrast(1.05);
+            transition: transform var(--transition-normal);
+        }
+
+        .news-image:hover {
+            transform: scale(1.02);
+        }
+
+
+        .featured-news {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 4rem 0;
+        }
+
+        .featured-item {
+            background: var(--secondary-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 2rem;
+        }
+
+        .featured-category {
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .featured-title {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .featured-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .news-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .news-hero p {
+                font-size: 1.1rem;
+            }
+
+            .news-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .news-tab {
+                width: 200px;
+                text-align: center;
+            }
+
+            .news-item-header,
+            .news-item-content {
+                padding: 1.5rem;
+            }
+
+            .featured-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../static/logo.png" alt="Crimson Desert Logo">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="news.html" class="active" data-i18n="nav.news">新闻</a></li>
+                    <li><a href="media.html" data-i18n="nav.media">媒体</a></li>
+                    <li><a href="guides.html" data-i18n="nav.guides">攻略</a></li>
+                    <li><a href="characters.html" data-i18n="nav.characters">角色</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="../news.html">EN</a>
+                    <a href="news.html" class="active">中文</a>
+                    <a href="../ja-JP/news.html">日本語</a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/news" data-i18n="nav.news">News</a></li>
+                <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+            </ul>
+            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
+                <a href="../news.html">EN</a>
+                <a href="news.html" class="active">中文</a>
+                <a href="../ja-JP/news.html">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl28292069.effectivegatecpm.com/c1022436be365ec29bf863fe4bce4351/invoke.js"
+        ></script>
+        <div id="container-c1022436be365ec29bf863fe4bce4351"></div>
+        <!-- News Hero -->
+        <section class="news-hero">
+            <div class="container">
+                <h1>最新消息</h1>
+                <p>随时了解红色沙漠的最新新闻、公告、活动和游戏更新。获取关于帕卫尔世界和克里夫与灰鬃团史诗冒险的独家见解。</p>
+            </div>
+        </section>
+
+        <!-- Featured News -->
+        <section class="featured-news">
+            <div class="container">
+                <h2 class="text-center mb-4">精选新闻</h2>
+                <div class="featured-item">
+                    <img src="../static/images/crimson-desert/01.jpg" alt="Crimson Desert Official Announcement" class="featured-image">
+                    <div class="featured-content">
+                        <span class="featured-category">Latest</span>
+                        <h3 class="featured-title">Crimson Desert Official Release Announcement - March 19, 2026</h3>
+                        <p class="featured-excerpt">We're thrilled to officially announce that Crimson Desert will launch on March 19, 2026! After years of development, players will finally be able to experience epic open-world action adventure, explore the vast continent of Pywel, and join Kliff and the Greymanes in their quest. Crimson Desert brings authentic open-world gameplay to life with stunning graphics, intense combat systems, and immersive storytelling. The game features a comprehensive single-player campaign, vast exploration, and extensive character progression. Players can master various weapons and combat styles, from swift swordplay to powerful magic, each with unique abilities and tactical advantages. The open-world system allows you to explore and discover the secrets of Pywel, balancing combat, exploration, and narrative progression. With realistic physics and dynamic weather systems, every moment in Crimson Desert feels unique and engaging.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Content -->
+        <section class="news-content">
+            <div class="container">
+                <!-- News Tabs -->
+                <div class="news-tabs">
+                    <button class="news-tab active" data-category="latest">Latest</button>
+                    <button class="news-tab" data-category="announcement">Announcement</button>
+                    <button class="news-tab" data-category="update">Update</button>
+                    <button class="news-tab" data-category="event">Event</button>
+                </div>
+
+                <!-- News List -->
+                <div class="news-list">
+                    <!-- Latest News Items -->
+                    <div class="news-item" data-category="latest">
+                        <div class="news-item-header">
+                            <span class="news-category">最新</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=54" target="_blank">Pre-order Crimson Desert Special Edition - Black Desert Limited Items</a></h3>
+                            <p class="news-date">2025-12-13</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=54" target="_blank">
+                                <img src="../static/images/news/c905e5a462620251213085243172.jpg" alt="Pre-order Crimson Desert Special Edition" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Pre-order Crimson Desert and receive exclusive Black Desert limited edition items! This special promotion offers unique rewards for early supporters of the game.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">公告</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=49" target="_blank">Crimson Desert Edition Contents and Pre-order Bonuses</a></h3>
+                            <p class="news-date">2025-12-12</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=49" target="_blank">
+                                <img src="../static/images/news/8678af0176c20251212074238111.jpg" alt="Crimson Desert Edition Contents" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Discover all the edition contents and exclusive pre-order bonuses available for Crimson Desert. Choose from Standard, Deluxe, or Collector's Edition.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">公告</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=50" target="_blank">Crimson Desert Release Date Announced - Pre-orders Now Available</a></h3>
+                            <p class="news-date">2025-12-05</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=50" target="_blank">
+                                <img src="../static/images/news/2605ef197ac20251205095031502.923x522.jpg" alt="Crimson Desert Release Date" class="news-image">
+                            </a>
+                            <p class="news-excerpt">The official release date for Crimson Desert has been announced! The game will launch on March 19, 2026. Pre-orders are now available across all platforms.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">活动</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=47" target="_blank">TOKYO GAME SHOW 2025 Participation</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=47" target="_blank">
+                                <img src="../static/images/news/88c929ff6ec20251028061835178.923x522.jpg" alt="TOKYO GAME SHOW 2025" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Crimson Desert will be showcased at TOKYO GAME SHOW 2025. Come visit our booth to experience the game firsthand!</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">公告</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=46" target="_blank">Nominated for 2025 gamescom Awards</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=46" target="_blank">
+                                <img src="../static/images/news/b8dc97747a820251028060938348.923x522.jpg" alt="gamescom Awards 2025" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Crimson Desert has been nominated for the 2025 gamescom Awards! This recognition highlights the game's exceptional quality and innovation.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">活动</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=45" target="_blank">Play Crimson Desert at gamescom and PAX West!</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=45" target="_blank">
+                                <img src="../static/images/news/f6dad65139b20251028062542214.923x522.jpg" alt="gamescom and PAX West" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Experience Crimson Desert at gamescom and PAX West! Try the game before launch and meet the development team.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">活动</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=41" target="_blank">2025 PAX EAST Participation Notice</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=41" target="_blank">
+                                <img src="../static/images/news/11eaffed81820251028062003066.923x522.png" alt="PAX EAST 2025" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Crimson Desert will be featured at PAX EAST 2025. Join us for exclusive gameplay demos and developer panels.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">更新</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=40" target="_blank">Developer Story: PEARL ABYSS BLACKSPACE Engine</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=40" target="_blank">
+                                <img src="../static/images/news/f365a72319f20251028061311479.923x522.png" alt="BLACKSPACE Engine" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Learn about the powerful BLACKSPACE engine that powers Crimson Desert. Discover the technology behind the stunning visuals and seamless gameplay.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">公告</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=31" target="_blank">Crimson Desert Coming in 2025! Add to Wishlist Now!</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=31" target="_blank">
+                                <img src="../static/images/news/ec30e52c07120251028061630611.923x522.jpg" alt="Crimson Desert 2025" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Crimson Desert is coming in 2025! Add the game to your wishlist now to stay updated on the latest news and announcements.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">活动</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=30" target="_blank">2024 G-STAR Participation Notice</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=30" target="_blank">
+                                <img src="../static/images/news/cbdcdbb666120251028055931397.923x522.png" alt="G-STAR 2024" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Crimson Desert made its appearance at G-STAR 2024. Check out the highlights from the event and see what we showcased.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">更新</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=29" target="_blank">Crimson Desert 50-Minute Gameplay Video Released</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=29" target="_blank">
+                                <img src="../static/images/news/bd464ed5fb220251028055319558.923x522.jpg" alt="50-Minute Gameplay" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Watch the first 50 minutes of Crimson Desert gameplay! Get an in-depth look at the game's mechanics, combat, and world exploration.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">更新</span>
+                            <h3 class="news-title"><a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=28" target="_blank">Crimson Desert 2024 gamescom - 4 Boss Battle Videos Released</a></h3>
+                            <p class="news-date">2025-10-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <a href="https://crimsondesert.pearlabyss.com/zh-CN/News/Notice/Detail?_boardNo=28" target="_blank">
+                                <img src="../static/images/news/c1339b587a620251028062916576.923x522.png" alt="Boss Battle Videos" class="news-image">
+                            </a>
+                            <p class="news-excerpt">Experience the intense boss battles in Crimson Desert! Watch four epic boss fight videos from gamescom 2024.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">公告</span>
+                            <h3 class="news-title">Pre-Orders Now Available for Crimson Desert</h3>
+                            <p class="news-date">2025-12-10</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_pc_digital_standard.jpg" alt="Crimson Desert Pre-Orders" class="news-image">
+                            <p class="news-excerpt">Pre-orders for Crimson Desert are now live! Secure your copy of the game and receive exclusive bonuses including special weapons, early access to special content, and unique character customization options. Crimson Desert pre-orders come with exciting rewards for early supporters. The pre-order package includes the "Founder's Edition" which features exclusive armor sets for Kliff, special weapons, and priority access to all future DLC content. Early adopters will also receive a digital artbook showcasing the game's development process, a soundtrack featuring epic compositions, and access to exclusive community events. Pre-order bonuses are available across all platforms including PC (Steam), PlayStation 5, and Xbox Series X/S. The pre-order period will run until the official launch date on March 19, 2026, giving players plenty of time to secure their copy and bonuses.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">更新</span>
+                            <h3 class="news-title">Combat System Deep Dive - Crimson Desert</h3>
+                            <p class="news-date">2025-12-05</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_ps5_digital_standard.jpg" alt="Crimson Desert Combat System and Character Art" class="news-image">
+                            <p class="news-excerpt">Get an in-depth look at the combat system in Crimson Desert. Learn about weapon mastery, combat styles, skill combinations, and how to master the intense action combat. The combat system in Crimson Desert offers authentic action depth. The game features a real-time action combat system where timing and skill are crucial. Players can master various weapons such as swords, spears, bows, and magic, each with distinct advantages. Positioning plays a significant role - players can dodge, parry, and counter-attack to gain advantages in combat. The stamina system affects combat performance, with players needing to manage their resources carefully during intense battles. Special abilities and weapon skills can turn the tide of battle, allowing for strategic depth beyond simple button mashing. Environmental factors like terrain and weather also impact combat, adding another layer of tactical consideration to every encounter.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="latest">
+                        <div class="news-item-header">
+                            <span class="news-category">最新</span>
+                            <h3 class="news-title">Kingdom Building Guide - Crimson Desert</h3>
+                            <p class="news-date">2025-11-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_pc_digital_deluxe.jpg" alt="Crimson Desert Kingdom Building" class="news-image">
+                            <p class="news-excerpt">Master the art of kingdom building in Crimson Desert. This comprehensive guide covers resource management, building placement, economic strategies, and how to create a thriving medieval kingdom. Crimson Desert offers deep kingdom management mechanics. The kingdom building system allows you to construct various structures including farms for food production, mines for resource extraction, barracks for unit training, and markets for trade. Strategic placement of buildings creates synergies - placing farms near water sources increases yield, while positioning defensive structures on high ground provides tactical advantages. The economic system requires balancing multiple resources: food, wood, stone, and gold. Trade routes connect your kingdom to others, allowing for diplomatic and economic interactions. Population management is crucial, as your citizens provide both labor and military recruits. Research trees unlock new technologies and building upgrades, allowing you to customize your kingdom's development path. The system rewards both careful planning and adaptive strategies as you respond to changing circumstances.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">活动</span>
+                            <h3 class="news-title">Crimson Desert Community Tournament Registration Open</h3>
+                            <p class="news-date">2025-11-20</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_ps5_digital_deluxe.jpg" alt="Crimson Desert Tournament" class="news-image">
+                            <p class="news-excerpt">Registration is now open for the first official Crimson Desert Community Tournament! Compete with other commanders for exclusive rewards and recognition in the Crimson Desert competitive scene. Show your strategic prowess in Crimson Desert. The tournament will feature multiple brackets including 1v1 duels, team battles, and large-scale siege competitions. Participants will compete in a series of matches with the top players advancing to the finals. Prizes include exclusive tournament-exclusive unit skins, special titles, in-game currency, and recognition in the game's hall of fame. The tournament will be streamed live on our official channels, giving spectators the chance to watch high-level strategic gameplay. Registration is free and open to all players who have completed the tutorial. The tournament format includes both single-elimination and round-robin phases, ensuring fair competition for all skill levels. Winners will be crowned as the first official Champions of Crimson Desert.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">更新</span>
+                            <h3 class="news-title">Unit Roster Revealed - Crimson Desert</h3>
+                            <p class="news-date">2025-11-15</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_xb_digital_deluxe.jpg" alt="Crimson Desert Units" class="news-image">
+                            <p class="news-excerpt">Discover the diverse unit roster available in Crimson Desert. From infantry and cavalry to siege weapons and archers, each unit in Crimson Desert has unique strengths and tactical roles. Learn how to build the perfect army in Crimson Desert. The infantry roster includes spearmen for anti-cavalry defense, swordsmen for melee combat, and halberdiers for versatile frontline units. Cavalry units range from light scouts for reconnaissance to heavily armored knights capable of devastating charges. Archers provide ranged support with longbowmen for long-range precision and crossbowmen for armor-piercing capabilities. Siege units include trebuchets for destroying fortifications, battering rams for gate assaults, and ballistae for anti-unit firepower. Each unit has specific counters and synergies - understanding these relationships is key to building effective armies. Units can be upgraded and customized with different equipment, allowing for further tactical specialization. The roster will continue to expand with post-launch content updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">公告</span>
+                            <h3 class="news-title">Beta Test Sign-Up Now Available - Crimson Desert</h3>
+                            <p class="news-date">2025-11-10</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_mac_digital_deluxe.jpg" alt="Crimson Desert Beta Test" class="news-image">
+                            <p class="news-excerpt">Sign up now for the Crimson Desert closed beta test! Get early access to the game and help shape the future of Crimson Desert. Beta testers will have the opportunity to provide feedback and experience Crimson Desert before the official launch. The beta test will include access to the full campaign mode, multiplayer battles, and all core gameplay features. Testers will be able to provide feedback through an integrated reporting system, helping the development team identify bugs, balance issues, and areas for improvement. Beta participants will receive exclusive beta tester badges and recognition in the final game. The beta will run in multiple phases, with each phase focusing on different aspects of the game. Early beta testers will have priority access to all future testing phases. All progress made during the beta will be reset before launch, but beta testers will receive special rewards in the full game as a thank you for their participation. Registration is open to all interested players, with selection based on system compatibility and availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">更新</span>
+                            <h3 class="news-title">Battlefield Maps Showcase - Crimson Desert</h3>
+                            <p class="news-date">2025-11-05</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_xb_digital_deluxe.jpg" alt="Crimson Desert Maps" class="news-image">
+                            <p class="news-excerpt">Explore the diverse battlefields of Crimson Desert. From medieval cities to open fields, each map in Crimson Desert offers unique strategic opportunities. Learn about terrain advantages and tactical positioning in Crimson Desert. The game features over 20 unique battlefields, each with distinct characteristics. Castle siege maps feature multiple layers of fortifications, requiring coordinated assaults and defensive strategies. Open field maps favor cavalry and ranged units, while forest maps provide cover for ambushes and stealth tactics. Mountain passes create chokepoints where smaller forces can hold off larger armies. Coastal maps include naval elements and beach landing scenarios. Each map has dynamic weather systems that affect visibility and movement. Destructible environments allow players to reshape the battlefield, creating new paths or destroying enemy cover. Map-specific objectives add variety beyond simple elimination, including capture points, resource gathering, and escort missions. The map editor will allow players to create and share custom battlefields after launch.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">活动</span>
+                            <h3 class="news-title">Developer Stream - Crimson Desert Gameplay Reveal</h3>
+                            <p class="news-date">2025-10-30</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_ps5_physical_deluxe.jpg" alt="Crimson Desert Developer Stream" class="news-image">
+                            <p class="news-excerpt">Join the developers for a live gameplay stream of Crimson Desert! Watch exclusive gameplay footage, learn about game mechanics, and ask questions about Crimson Desert. This is your chance to see Crimson Desert in action. The stream will feature live gameplay demonstrations of both single-player campaign missions and multiplayer battles. Developers will walk through the kingdom building system, showing how to construct and manage your medieval realm. Viewers will get an exclusive look at the combat system in action, with detailed explanations of unit formations, tactical positioning, and special abilities. The stream will include a Q&A session where developers will answer community questions about gameplay, features, and development. Special guests including game designers and artists will share insights into the creative process behind Crimson Desert. The stream will be available on multiple platforms including Twitch, YouTube, and our official website, with VODs available for those who miss the live broadcast. Viewers can participate in giveaways and win exclusive in-game items during the stream.</p>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">公告</span>
+                            <h3 class="news-title">Crimson Desert Platform Announcement</h3>
+                            <p class="news-date">2025-10-25</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="../static/images/news/edition_xb_physical_deluxe.jpg" alt="Crimson Desert Platforms" class="news-image">
+                            <p class="news-excerpt">Crimson Desert will be available on PC (Steam), PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S. Crimson Desert will support cross-platform play, allowing players to battle regardless of platform. Experience Crimson Desert on your preferred platform. The game will feature platform-specific optimizations, with enhanced graphics and performance on next-generation consoles. PC players will have access to advanced graphics settings, mod support, and custom keybindings. Console versions will include controller-optimized UI and gameplay mechanics. Cross-platform progression allows you to access your account and progress from any device. The game will support cross-platform multiplayer, meaning friends can play together regardless of whether they're on PC, PlayStation, or Xbox. Platform-specific features include PlayStation trophies, Xbox achievements, and Steam trading cards. All platforms will receive simultaneous updates and content releases, ensuring a unified experience across all devices. Pre-orders are available on all platforms with platform-specific bonuses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                <div class="logo">
+                    <img src="../static/logo.png" alt="Crimson Desert Logo">
+                </div>
+                    <p>Stay updated with the latest Crimson Desert news and announcements. Experience the ultimate medieval strategy combat in Crimson Desert.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="/news" data-i18n="nav.news">News</a></li>
+                        <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                        <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                        <li><a href="/privacy-policy" data-i18n="nav.privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" data-i18n="nav.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/chroniclesmedieval" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/chroniclesmedieval" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/chroniclesmedieval" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/chroniclesmedieval" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Crimson Desert. All rights reserved. | Stay updated with Crimson Desert news and experience epic medieval battles.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/base.js"></script>
+    <script>
+        // News Tab Filtering
+        let activeCategory = 'latest';
+        
+        document.querySelectorAll('.news-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.news-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                activeCategory = tab.dataset.category;
+                
+                const newsItems = document.querySelectorAll('.news-item');
+                newsItems.forEach(item => {
+                    if (activeCategory === 'latest' || item.dataset.category === activeCategory) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.news-item, .featured-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

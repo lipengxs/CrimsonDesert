@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色沙漠角色 - 认识Pywel的英雄们</title>
+    <meta name="description" content="探索红色沙漠的角色 - Kliff、Oongka、Yann、Naira和灰鬃佣兵团。了解他们的背景、技能和在Pywel史诗故事中的角色。">
+    <meta name="keywords" content="红色沙漠角色, Kliff, Oongka, Yann, Naira, 灰鬃, 红色沙漠英雄, Pywel角色">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crimson-desert.info/zh-CN/characters">
+    <meta property="og:title" content="红色沙漠角色 - 认识Pywel的英雄们">
+    <meta property="og:description" content="探索红色沙漠的角色 - Kliff、Oongka、Yann、Naira和灰鬃佣兵团。">
+    <meta property="og:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="红色沙漠角色 - 认识Pywel的英雄们">
+    <meta name="twitter:description" content="探索红色沙漠的角色 - Kliff、Oongka、Yann、Naira和灰鬃佣兵团。">
+    <meta name="twitter:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="apple-touch-icon" href="../static/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="2f565d4d2f56efdc" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://crimson-desert.info/zh-CN/characters">
+    
+    <!-- Language System -->
+    <script src="../static/js/language.js"></script>
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+    
+    <style>
+        .characters-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.90)), 
+                        url('../static/images/crimson-desert/02.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            color: var(--text-primary);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .characters-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .characters-hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .characters-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .character-section {
+            margin-bottom: 4rem;
+        }
+
+        .character-section h2 {
+            color: var(--accent-gold);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 1rem;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .character-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            overflow: hidden;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .character-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .character-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .character-role {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .character-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .character-skills {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .character-skills h4 {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .character-skills ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .character-skills ul li {
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .character-skills ul li::before {
+            content: '⚔';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .faction-section {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 4rem 0;
+        }
+
+        .faction-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faction-card h3 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faction-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .characters-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .characters-hero p {
+                font-size: 1.1rem;
+            }
+
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../static/logo.png" alt="红色沙漠 Logo" loading="eager" fetchpriority="high" width="200" height="60">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+                    <li><a href="media.html" data-i18n="nav.media">媒体</a></li>
+                    <li><a href="guides.html" data-i18n="nav.guides">攻略</a></li>
+                    <li><a href="characters.html" class="active" data-i18n="nav.characters">角色</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="../characters.html">EN</a>
+                    <a href="characters.html" class="active">中文</a>
+                    <a href="../ja-JP/characters.html">日本語</a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+                <li><a href="media.html" data-i18n="nav.media">媒体</a></li>
+                <li><a href="guides.html" data-i18n="nav.guides">攻略</a></li>
+                <li><a href="characters.html" data-i18n="nav.characters">角色</a></li>
+            </ul>
+            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
+                <a href="../characters.html">EN</a>
+                <a href="characters.html" class="active">中文</a>
+                <a href="../ja-JP/characters.html">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl28292069.effectivegatecpm.com/c1022436be365ec29bf863fe4bce4351/invoke.js"
+        ></script>
+        <div id="container-c1022436be365ec29bf863fe4bce4351"></div>
+        <!-- Characters Hero -->
+        <section class="characters-hero">
+            <div class="container">
+                <h1>角色</h1>
+                <p>认识红色沙漠的英雄和关键人物。了解他们的背景、动机和在Pywel史诗故事中的角色。</p>
+            </div>
+        </section>
+
+        <!-- Main Characters -->
+        <section class="characters-content">
+            <div class="container">
+                <div class="character-section">
+                    <h2>主要角色</h2>
+                    <div class="character-grid">
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/04.jpg" alt="Kliff" class="character-image">
+                            <h3>Kliff</h3>
+                            <p class="character-role">灰鬃佣兵团领袖</p>
+                            <p>Kliff是灰鬃佣兵团的坚定领袖。在黑熊的毁灭性伏击导致他的同伴死亡或分散在Pywel各地后，Kliff踏上了一段史诗般的旅程，与幸存者重聚并重建失去的一切。作为一名技艺精湛的战士，Kliff拥有坚定不移的决心，他的领导力和战斗能力使他在争夺Pywel控制权的斗争中成为一股强大的力量。</p>
+                            <div class="character-skills">
+                                <h4>核心能力</h4>
+                                <ul>
+                                    <li>精湛的剑术和战斗领导能力</li>
+                                    <li>战略规划和战术决策</li>
+                                    <li>坚定不移的决心和韧性</li>
+                                    <li>激励和团结分散盟友的能力</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/05.jpg" alt="Oongka" class="character-image">
+                            <h3>Oongka</h3>
+                            <p class="character-role">灰鬃成员</p>
+                            <p>Oongka是灰鬃佣兵团的忠诚成员，以其凶猛的战斗技能和对Kliff的坚定忠诚而闻名。作为一名在灰鬃遭受残酷攻击后幸存下来的熟练战士，Oongka在团队重聚和重建的努力中发挥着关键作用。她在战斗中的专业知识和对Pywel危险的深刻理解，使她在恢复灰鬃的追求中成为无价的盟友。</p>
+                            <div class="character-skills">
+                                <h4>核心能力</h4>
+                                <ul>
+                                    <li>卓越的战斗技能和战场意识</li>
+                                    <li>对Pywel地形和危险的深入了解</li>
+                                    <li>对灰鬃事业的忠诚和奉献</li>
+                                    <li>在恶劣环境中的生存专业知识</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/06.jpg" alt="Yann" class="character-image">
+                            <h3>Yann</h3>
+                            <p class="character-role">灰鬃成员</p>
+                            <p>Yann是灰鬃佣兵团中足智多谋且狡猾的成员，以其在Pywel复杂政治环境中导航的能力而闻名。凭借敏锐的头脑和快速思考，Yann为灰鬃面临的挑战提供战略洞察和外交解决方案。他对各个派系及其动机的了解，使他在建立联盟和避免冲突方面至关重要。</p>
+                            <div class="character-skills">
+                                <h4>核心能力</h4>
+                                <ul>
+                                    <li>战略思维和政治敏锐度</li>
+                                    <li>外交谈判技巧</li>
+                                    <li>对Pywel派系和政治的了解</li>
+                                    <li>资源收集和管理</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="../static/images/crimson-desert/07.jpg" alt="Naira" class="character-image">
+                            <h3>Naira</h3>
+                            <p class="character-role">灰鬃成员</p>
+                            <p>Naira是一名技艺精湛的战士和灰鬃的值得信赖的成员，以其在战斗中的多才多艺和适应任何情况的能力而闻名。无论是面对强大的敌人还是穿越危险的地形，Naira的技能和决心使她成为团队的宝贵资产。她的勇气和愿意承担最危险任务的意愿，展示了她对灰鬃事业的承诺。</p>
+                            <div class="character-skills">
+                                <h4>核心能力</h4>
+                                <ul>
+                                    <li>多才多艺的战斗技巧和适应性</li>
+                                    <li>多种武器类型的专业知识</li>
+                                    <li>面对危险的勇气和意愿</li>
+                                    <li>团队协调和支持能力</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faction Information -->
+        <section class="faction-section">
+            <div class="container">
+                <h2 class="text-center mb-4">灰鬃佣兵团</h2>
+                <div class="faction-card">
+                    <h3>关于灰鬃佣兵团</h3>
+                    <p>灰鬃是一个著名的佣兵团，曾经在广阔的Pywel大陆上活动。由Kliff领导，这个团队以其技能、忠诚和完成危险任务的有效性而闻名。然而，他们的宿敌黑熊发动的毁灭性伏击使灰鬃支离破碎——成员死亡或分散在Pywel各地。</p>
+                    <p>现在，Kliff和幸存成员必须重聚，重建他们倒下的团队，并夺回失去的一切。灰鬃的命运和Pywel的未来取决于他们克服前方挑战并对抗试图摧毁他们的力量的能力。</p>
+                    <p>灰鬃不仅仅是一个佣兵团——他们是一个由忠诚、共同经历和共同目标联系在一起的家族。每个成员都为团队带来独特的技能和视角，使他们在一起时比单独时更强大。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="../static/logo.png" alt="红色沙漠 Logo" loading="lazy" width="200" height="60">
+                    </div>
+                    <p>探索红色沙漠的角色及其穿越Pywel的史诗旅程。加入Kliff和灰鬃，参与他们的生存和救赎之旅。</p>
+                </div>
+                <div class="footer-links">
+                    <h3>导航</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="news.html" data-i18n="nav.news">新闻</a></li>
+                        <li><a href="media.html" data-i18n="nav.media">媒体</a></li>
+                        <li><a href="guides.html" data-i18n="nav.guides">攻略</a></li>
+                        <li><a href="characters.html" data-i18n="nav.characters">角色</a></li>
+                        <li><a href="../privacy-policy.html" data-i18n="nav.privacy">隐私政策</a></li>
+                        <li><a href="../terms-of-service.html" data-i18n="nav.terms">服务条款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>社区</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/crimsondesert" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/crimsondesert" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/crimsondesert" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/crimsondesert" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 红色沙漠。保留所有权利。| 发现Pywel的英雄，体验他们在红色沙漠中的史诗故事。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/base.js"></script>
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.character-card, .faction-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+

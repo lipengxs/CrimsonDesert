@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Desert Characters - Meet the Heroes of Pywel</title>
+    <meta name="description" content="Discover the characters of Crimson Desert - Kliff, Oongka, Yann, Naira, and the Greymanes mercenary group. Learn about their backgrounds, skills, and roles in the epic story of Pywel.">
+    <meta name="keywords" content="Crimson Desert characters, Kliff, Oongka, Yann, Naira, Greymanes, Crimson Desert heroes, Pywel characters">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crimson-desert.info/characters">
+    <meta property="og:title" content="Crimson Desert Characters - Meet the Heroes of Pywel">
+    <meta property="og:description" content="Discover the characters of Crimson Desert - Kliff, Oongka, Yann, Naira, and the Greymanes mercenary group.">
+    <meta property="og:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crimson Desert Characters - Meet the Heroes of Pywel">
+    <meta name="twitter:description" content="Discover the characters of Crimson Desert - Kliff, Oongka, Yann, Naira, and the Greymanes mercenary group.">
+    <meta name="twitter:image" content="https://crimson-desert.info/static/images/crimson-desert/01.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="apple-touch-icon" href="static/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="2f565d4d2f56efdc" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://crimson-desert.info/characters">
+    
+    <!-- Language System -->
+    <script src="static/js/language.js"></script>
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+    
+    <style>
+        .characters-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.90)), 
+                        url('static/images/crimson-desert/02.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            color: var(--text-primary);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .characters-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .characters-hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .characters-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .character-section {
+            margin-bottom: 4rem;
+        }
+
+        .character-section h2 {
+            color: var(--accent-gold);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 1rem;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .character-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            overflow: hidden;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .character-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .character-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .character-role {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .character-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .character-skills {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .character-skills h4 {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .character-skills ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .character-skills ul li {
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .character-skills ul li::before {
+            content: '⚔';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .faction-section {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 4rem 0;
+        }
+
+        .faction-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faction-card h3 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faction-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .characters-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .characters-hero p {
+                font-size: 1.1rem;
+            }
+
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="static/logo.png" alt="Crimson Desert Logo" loading="eager" fetchpriority="high" width="200" height="60">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/news" data-i18n="nav.news">News</a></li>
+                    <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                    <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                    <li><a href="/characters" class="active" data-i18n="nav.characters">Characters</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="/characters.html" class="active">EN</a>
+                    <a href="/zh-CN/characters.html">中文</a>
+                    <a href="/ja-JP/characters.html">日本語</a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/news" data-i18n="nav.news">News</a></li>
+                <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                <li><a href="/characters" data-i18n="nav.characters">Characters</a></li>
+            </ul>
+            <div class="language-selector" style="margin-top: 2rem; justify-content: center;">
+                <a href="/characters.html" class="active">EN</a>
+                <a href="/zh-CN/characters.html">中文</a>
+                <a href="/ja-JP/characters.html">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl28292069.effectivegatecpm.com/c1022436be365ec29bf863fe4bce4351/invoke.js"
+        ></script>
+        <div id="container-c1022436be365ec29bf863fe4bce4351"></div>
+        <!-- Characters Hero -->
+        <section class="characters-hero">
+            <div class="container">
+                <h1>CHARACTERS</h1>
+                <p>Meet the heroes and key figures of Crimson Desert. Discover their backgrounds, motivations, and roles in the epic story of Pywel.</p>
+            </div>
+        </section>
+
+        <!-- Main Characters -->
+        <section class="characters-content">
+            <div class="container">
+                <div class="character-section">
+                    <h2>Main Characters</h2>
+                    <div class="character-grid">
+                        <div class="character-card">
+                            <img src="static/images/crimson-desert/04.jpg" alt="Kliff" class="character-image">
+                            <h3>Kliff</h3>
+                            <p class="character-role">Leader of the Greymanes</p>
+                            <p>Kliff is the determined leader of the Greymanes mercenary group. After a devastating ambush by the Black Bears leaves his comrades dead or scattered across Pywel, Kliff embarks on an epic journey to reunite with the survivors and rebuild what was lost. A skilled warrior with unwavering resolve, Kliff's leadership and combat prowess make him a formidable force in the struggle for control of Pywel.</p>
+                            <div class="character-skills">
+                                <h4>Key Abilities</h4>
+                                <ul>
+                                    <li>Expert swordsmanship and combat leadership</li>
+                                    <li>Strategic planning and tactical decision-making</li>
+                                    <li>Unwavering determination and resilience</li>
+                                    <li>Ability to inspire and unite scattered allies</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="static/images/crimson-desert/05.jpg" alt="Oongka" class="character-image">
+                            <h3>Oongka</h3>
+                            <p class="character-role">Greymanes Member</p>
+                            <p>Oongka is a loyal member of the Greymanes mercenary group, known for her fierce combat skills and unwavering loyalty to Kliff. A skilled warrior who has survived the brutal attack on the Greymanes, Oongka plays a crucial role in the group's efforts to reunite and rebuild. Her expertise in battle and deep understanding of Pywel's dangers make her an invaluable ally in the quest to restore the Greymanes.</p>
+                            <div class="character-skills">
+                                <h4>Key Abilities</h4>
+                                <ul>
+                                    <li>Exceptional combat skills and battlefield awareness</li>
+                                    <li>Deep knowledge of Pywel's terrain and dangers</li>
+                                    <li>Loyalty and dedication to the Greymanes cause</li>
+                                    <li>Survival expertise in harsh environments</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="static/images/crimson-desert/06.jpg" alt="Yann" class="character-image">
+                            <h3>Yann</h3>
+                            <p class="character-role">Greymanes Member</p>
+                            <p>Yann is a resourceful and cunning member of the Greymanes, known for his ability to navigate the complex political landscape of Pywel. With a sharp mind and quick thinking, Yann provides strategic insights and diplomatic solutions to the challenges facing the Greymanes. His knowledge of the various factions and their motivations makes him essential in forging alliances and avoiding conflicts.</p>
+                            <div class="character-skills">
+                                <h4>Key Abilities</h4>
+                                <ul>
+                                    <li>Strategic thinking and political acumen</li>
+                                    <li>Diplomatic negotiation skills</li>
+                                    <li>Knowledge of Pywel's factions and politics</li>
+                                    <li>Resource gathering and management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <img src="static/images/crimson-desert/07.jpg" alt="Naira" class="character-image">
+                            <h3>Naira</h3>
+                            <p class="character-role">Greymanes Member</p>
+                            <p>Naira is a skilled warrior and trusted member of the Greymanes, known for her versatility in combat and her ability to adapt to any situation. Whether facing powerful enemies or navigating treacherous terrain, Naira's skills and determination make her a valuable asset to the group. Her courage and willingness to take on the most dangerous missions demonstrate her commitment to the Greymanes' cause.</p>
+                            <div class="character-skills">
+                                <h4>Key Abilities</h4>
+                                <ul>
+                                    <li>Versatile combat techniques and adaptability</li>
+                                    <li>Expertise in multiple weapon types</li>
+                                    <li>Courage and willingness to face danger</li>
+                                    <li>Team coordination and support abilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faction Information -->
+        <section class="faction-section">
+            <div class="container">
+                <h2 class="text-center mb-4">The Greymanes</h2>
+                <div class="faction-card">
+                    <h3>About the Greymanes Mercenary Group</h3>
+                    <p>The Greymanes are a renowned mercenary group that once operated across the vast continent of Pywel. Led by Kliff, the group was known for their skill, loyalty, and effectiveness in completing dangerous missions. However, a devastating ambush by their sworn enemies, the Black Bears, left the Greymanes shattered - with members dead or scattered across Pywel.</p>
+                    <p>Now, Kliff and the surviving members must reunite, rebuild their fallen group, and reclaim what was lost. The fate of the Greymanes and the future of Pywel rest on their ability to overcome the challenges ahead and stand against the forces that seek to destroy them.</p>
+                    <p>The Greymanes represent more than just a mercenary group - they are a family bound by loyalty, shared experiences, and a common goal. Each member brings unique skills and perspectives to the group, making them stronger together than they could ever be alone.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="static/logo.png" alt="Crimson Desert Logo" loading="lazy" width="200" height="60">
+                    </div>
+                    <p>Discover the characters of Crimson Desert and their epic journey across Pywel. Join Kliff and the Greymanes in their quest for survival and redemption.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="/news" data-i18n="nav.news">News</a></li>
+                        <li><a href="/media" data-i18n="nav.media">Media</a></li>
+                        <li><a href="/guides" data-i18n="nav.guides">Guides</a></li>
+                        <li><a href="/characters" data-i18n="nav.characters">Characters</a></li>
+                        <li><a href="/privacy-policy" data-i18n="nav.privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" data-i18n="nav.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/crimsondesert" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/crimsondesert" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/crimsondesert" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/crimsondesert" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Crimson Desert. All rights reserved. | Discover the heroes of Pywel and experience their epic story in Crimson Desert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/base.js"></script>
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.character-card, .faction-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
