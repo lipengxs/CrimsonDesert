@@ -3,44 +3,108 @@
     <!-- Main Navigation URLs -->
     <url>
         <loc>https://crimson-desert.com/</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/news</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/media</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/guides</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/characters</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/privacy-policy</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-27</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/terms-of-service</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-27</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
+    </url>
+    
+    <!-- Chinese (Simplified) URLs -->
+    <url>
+        <loc>https://crimson-desert.com/zh-CN/</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/zh-CN/news</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/zh-CN/media</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/zh-CN/guides</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/zh-CN/characters</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Japanese URLs -->
+    <url>
+        <loc>https://crimson-desert.com/ja-JP/</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/ja-JP/news</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/ja-JP/media</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/ja-JP/guides</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/ja-JP/characters</loc>
+        <lastmod>2025-12-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
