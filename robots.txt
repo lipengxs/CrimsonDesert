@@ -1,14 +1,26 @@
-# robots.txt for Fate Trigger
+# robots.txt for Crimson Desert
 User-agent: *
 Allow: /
-Allow: /news/
-Allow: /media/
-Allow: /guides/
-Allow: /map/
-Allow: /weapons/
-Allow: /awakeners/
+Allow: /news
+Allow: /media
+Allow: /guides
+Allow: /characters
 Allow: /privacy-policy
 Allow: /terms-of-service
+
+# Allow Chinese (Simplified) pages
+Allow: /zh-CN/
+Allow: /zh-CN/news
+Allow: /zh-CN/media
+Allow: /zh-CN/guides
+Allow: /zh-CN/characters
+
+# Allow Japanese pages
+Allow: /ja-JP/
+Allow: /ja-JP/news
+Allow: /ja-JP/media
+Allow: /ja-JP/guides
+Allow: /ja-JP/characters
 
 # Disallow admin and system directories
 Disallow: /admin/
@@ -19,7 +31,7 @@ Disallow: /cgi-bin/
 Disallow: /*?*
 
 # Sitemap location
-Sitemap: https://fate-trigger.com/sitemap.xml
+Sitemap: https://crimson-desert.com/sitemap.xml
 
 # Crawl delay to prevent server overload
 Crawl-delay: 10 
