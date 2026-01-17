@@ -22,6 +22,10 @@ Allow: /ja-JP/media
 Allow: /ja-JP/guides
 Allow: /ja-JP/characters
 
+# Allow static resources including favicon
+Allow: /static/favicon.ico
+Allow: /favicon.ico
+
 # Disallow admin and system directories
 Disallow: /admin/
 Disallow: /system/
