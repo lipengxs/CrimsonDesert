@@ -104,9 +104,11 @@ Pre-order Crimson Desert to receive:
 
 ---
 
-## 🌐 Official Resources
+## 🌐 Resources
 
-**Official Website:** https://crimson-desert.com/
+**⚠️ Note:** This is a fan website. For the official website, visit: https://crimsondesert.pearlabyss.com/
+
+**This Fan Website:** https://crimson-desert.com/
 
 **Chinese Website:** https://crimson-desert.com/zh-CN/
 
@@ -162,7 +164,7 @@ Watch the official game trailer to experience Crimson Desert's stunning visuals 
 
 ## 📞 Contact Us
 
-For any questions or more information, please visit the official website: **https://crimson-desert.com/**
+For any questions or more information, please visit the official website: **https://crimsondesert.pearlabyss.com/**
 
 ---
 
@@ -172,7 +174,7 @@ Time until Crimson Desert's official release:
 
 **March 19, 2026** - Get ready for an epic adventure!
 
-Visit the official website now to learn more and pre-order: **https://crimson-desert.com/**
+Visit the official website now to learn more and pre-order: **https://crimsondesert.pearlabyss.com/**
 
 ---
 

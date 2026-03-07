@@ -1,0 +1,285 @@
+假设你是html、js、css高级程序员，你需要建设网站。
+帮忙制作一个网站，我注册了marstactics.com这个域名，需要你帮忙设计一个网站，该网站主要是来介绍Mars Tactics这个游戏，这个游戏的不同页面的结构一样，都是header（logo+菜单）、main（主要文案）、footer，整体网站都是英文网站，
+这里整体网站的架构是html+css+js，这个网站会部署到cloudflare的page
+这里一些通用的css样式可以都放到static/base.css，比如说header、footer、整体风格
+通用的js放到static/base.js，其他页面引入都增加一个版本号，整体网站要符合google seo规范，header中的一些必要的meta自动帮忙生成
+你可以先根据我提供的内容，分析下可以做哪些菜单，下面是一些网站内容；
+
+《火星战略》（Mars Tactics） 是一款即将推出的回合制战术策略游戏，背景设定在深陷战火的红色星球火星上。 
+以下是该游戏的详细描述：
+1. 基本信息
+开发商/发行商：由 Takibi Games 开发，由知名的独立游戏发行商 Hooded Horse（曾发行《庄园领主》等）出版。
+发布时间：预计于 2026年5月 在 PC 平台（Steam、GOG 和 Epic Games Store）发布。
+核心玩法：游戏巧妙地将 XCOM 式的回合制战术战斗与大规模的行星战略管理相结合。 
+2. 故事背景与阵营
+玩家将在资源争夺和工人起义的背景下选择加入其中一个不对称的阵营： 
+资本方（Capital）：代表大企业和股东，拥有强大的起始资源、精良的装备和全球影响力，但需满足地球方面的需求。
+劳动方（Labor）：由资源匮乏但意志坚定的革命军组成，依赖灵活的战术、当地制造和高昂的士气。 
+3. 主要游戏特色
+可完全破坏的环境：战场的环境完全可以被摧毁。玩家可以用手榴弹炸出“散兵坑”作为掩体，或者直接拆除墙壁来创造新的进攻角度，甚至呼叫空袭夷平敌方躲藏的建筑。
+动态士兵成长：士兵会根据他们在战场上的实际表现动态学习和提升技能。随着战争推进，玩家还可以为士兵安装控制增强装置或进行网络化改造。
+创新的射击与压制机制：游戏强调“火力和移动”。即使子弹未命中，射击也会对敌人产生压制效果，使其在下一回合行动受限。成功的压制还能为己方小队换取额外的行动点。
+宏观战略层：除了微观战斗，玩家还需要在广阔的火星战略地图上调度部队、建立补给线、建设基地以及开展科研工作。
+载具与武器交互：战场上可以使用火炮、无人机和车辆。士兵之间还可以互扔弹匣或未拔插销的手榴弹，实现实时的装备共享。 
+目前该游戏已在 Steam、Epic Games Store 和 GOG 开启预约。
+```
+相关资料可以看看这几个网站，
+https://store.epicgames.com/ja/p/mars-tactics-4a717e
+https://www.gamespress.com/en-US/Mars-Tactics-pcgs-tokyo-direct-2025
+https://www.pcgamer.com/games/rts/if-humans-ever-live-on-mars-will-they-bend-the-knee-to-earths-institutions-or-turn-the-red-planet-even-redder-mars-tactics-puts-the-answer-in-your-hands-next-year/
+https://gamicus.fandom.com/wiki/Mars_Tactics
+https://wiki.hoodedhorse.com/Mars_Tactics/Main_Page
+https://www.ign.com/games/mars-tactics
+
+
+你可以先爬取上面网站的内容进行分析
+同时也分析下我本地resources目录下的网页和图片文件，帮忙丰富我网站的内容
+
+resources下的图片，帮忙移动到/static/images/下，可以对图片进行分类
+
+网站的整体风格以及背景颜色，你可以根据网站的内容进行调整，重新设计
+一、首页 页面
+首页至少包含下面几块内容
+1、菜单栏，包含Home（首页链接）、News（新闻页面）、Media（多媒体页面）、Guides（攻略菜单），这里的菜单栏你可以自己根据内容进行增加或者删减，不要局限于我给定的菜单了
+2、向大家介绍PAX AUTOCRATICA是什么，发布时间，发布中需要有倒计时时钟（即将推出：May 2026）
+3、游戏介绍，下面放一个youtubo视频iframe，参考这个<iframe width="560" height="315" src="https://www.youtube.com/embed/0FysDXe03MA?si=Zunaz3JUuRtoKRUL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>下面是剧情、背景、语言等
+4、how to play，
+5、放一些游戏截图
+6、FAQ，
+7、meta部分都要根据内容重新更新
+8、footer中的链接栏得根据header中的menu进行更新
+你可以发挥想象生成内容，使得围绕着关键字内容丰富，要求配色简洁清晰漂亮，整个页面是一个落地页，你需要围绕着关键词Mars Tactics游戏去写页面内容。 我希望你能够写一个 SEO 友好的页面，有落地页的常见 Section，整体单词数量大于1000个，核心关键词Mars Tactics的密度在3%左右。  同时你扫描static/images下的
+
+
+
+二、News英文页面
+帮忙生成一个新闻列表，点击可以直接跳转到对应的页面，列表页需要包含标题、提示、图片、链接跳转是直接打开新页面  
+下面是页面的一些html，我需要你先分析出里面的图片，然后将图片下载下来/static/images/news目录下，然后将新闻列表页面指向当前网站的图片地址，然后点击跳转的详情链接前缀都是https://www.ign.com/，下面是网页内容
+<section data-cy="main-content" class="main-content"><div data-cy="content-item" class="content-item jsx-2981448069 row divider" data-id="30b923a7-a48d-4be4-9047-389bc7aecb7a"><a data-cy="item-body" class="item-body" aria-label="Mars Tactics - Official Gameplay Trailer #2" href="/videos/mars-tactics-official-gameplay-trailer-2"><div data-cy="item-thumbnail" class="item-thumbnail"><span><img alt="Mars Tactics - Official Gameplay Trailer #2" decoding="async" class="progressive-image jsx-2021719738 item-image aspect-ratio aspect-ratio-16-9 jsx-2605834259 jsx-2338608387 hover-opacity" loading="lazy" src="https://assets-prd.ignimgs.com/2025/09/26/marstacticsgameplaytrailer-ign-blogroll-1758903698597.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80" data-cy="progressive-image" srcset="https://assets-prd.ignimgs.com/2025/09/26/marstacticsgameplaytrailer-ign-blogroll-1758903698597.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80 1x, https://assets-prd.ignimgs.com/2025/09/26/marstacticsgameplaytrailer-ign-blogroll-1758903698597.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;dpr=2&amp;format=jpg&amp;auto=webp&amp;quality=80 2x" pinger-seen="true"><span data-duration="60" class="jsx-1396601900 video-duration"><time data-cy="caption" class="caption jsx-1762799490 bold">1:00</time></span></span></div><div class="stack jsx-659253495 item-details" data-cy="item-details"><div data-cy="caption" class="caption jsx-1762799490 item-publish-date small">Sep 29, 2025</div><span class="interface jsx-326752785 jsx-4254096439 item-title bold" data-cy="item-title">Mars Tactics - Official Gameplay Trailer #2</span><div class="interface jsx-326752785 jsx-957202555 item-subtitle small" data-cy="item-subtitle">Sep 29, 2025 - Check out new gameplay ahead of this retro-style tactical strategy game's launch next year.</div><div class="stack jsx-59817748 jsx-3492383812 item-more-data"><object data-cy="object-related-content-link" class="caption jsx-1762799490 data small" title="Related Content Link"><a class="caption jsx-1762799490 data small" data-cy="object-related-content-link-caption" href="/games/mars-tactics"><span class="ign-icon icon-game-object jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-game-object" aria-label="Game" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/GameObject.1056bc66.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>Mars Tactics</a></object><div data-cy="caption" class="caption jsx-1762799490 jsx-2088664416 comment-count data small"><span class="ign-icon icon-comment jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-comment" aria-label="Comments" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/Comment.e2c389d0.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>1</div></div></div></a></div><div data-cy="content-item" class="content-item jsx-2981448069 row divider" data-id="99bf451b-ec9a-4ca0-81ab-e3a88add1796"><a data-cy="item-body" class="item-body" aria-label="Mars Tactics - Mars Tactics - Official Gameplay Trailer" href="/videos/mars-tactics-official-gameplay-trailer-pc-gaming-show-2024"><div data-cy="item-thumbnail" class="item-thumbnail"><span><img alt="Mars Tactics - Mars Tactics - Official Gameplay Trailer" decoding="async" class="progressive-image jsx-2021719738 item-image aspect-ratio aspect-ratio-16-9 jsx-2605834259 jsx-2338608387 hover-opacity" loading="lazy" src="https://assets-prd.ignimgs.com/2024/06/09/mars-tactics-1717965128437.png?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80" data-cy="progressive-image" srcset="https://assets-prd.ignimgs.com/2024/06/09/mars-tactics-1717965128437.png?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80 1x, https://assets-prd.ignimgs.com/2024/06/09/mars-tactics-1717965128437.png?crop=16%3A9&amp;width=240&amp;height=135&amp;dpr=2&amp;format=jpg&amp;auto=webp&amp;quality=80 2x" pinger-seen="true"><span data-duration="89" class="jsx-1396601900 video-duration"><time data-cy="caption" class="caption jsx-1762799490 bold">1:29</time></span></span></div><div class="stack jsx-659253495 item-details" data-cy="item-details"><div data-cy="caption" class="caption jsx-1762799490 item-publish-date small">Jun 10, 2024</div><span class="interface jsx-326752785 jsx-4254096439 item-title bold" data-cy="item-title">Mars Tactics - Mars Tactics - Official Gameplay Trailer</span><div class="interface jsx-326752785 jsx-957202555 item-subtitle small" data-cy="item-subtitle">Jun 10, 2024</div><div class="stack jsx-59817748 jsx-3492383812 item-more-data"><object data-cy="object-related-content-link" class="caption jsx-1762799490 data small" title="Related Content Link"><a class="caption jsx-1762799490 data small" data-cy="object-related-content-link-caption" href="/games/mars-tactics"><span class="ign-icon icon-game-object jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-game-object" aria-label="Game" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/GameObject.1056bc66.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>Mars Tactics</a></object></div></div></a></div><div data-cy="content-item" class="content-item jsx-2981448069 row divider" data-id="0b9541fc-b130-4939-8bc0-c4ce45542e20"><a data-cy="item-body" class="item-body" aria-label="Mars Tactics - Official Gameplay Trailer" href="/videos/mars-tactics-official-gameplay-trailer"><div data-cy="item-thumbnail" class="item-thumbnail"><span><img alt="Mars Tactics - Official Gameplay Trailer" decoding="async" class="progressive-image jsx-2021719738 item-image aspect-ratio aspect-ratio-16-9 jsx-2605834259 jsx-2338608387 hover-opacity" loading="lazy" src="https://assets-prd.ignimgs.com/2023/10/09/marstacticsgameplaytrailer-ign-blogroll-1696872807200.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80" data-cy="progressive-image" srcset="https://assets-prd.ignimgs.com/2023/10/09/marstacticsgameplaytrailer-ign-blogroll-1696872807200.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80 1x, https://assets-prd.ignimgs.com/2023/10/09/marstacticsgameplaytrailer-ign-blogroll-1696872807200.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;dpr=2&amp;format=jpg&amp;auto=webp&amp;quality=80 2x" pinger-seen="true"><span data-duration="95" class="jsx-1396601900 video-duration"><time data-cy="caption" class="caption jsx-1762799490 bold">1:35</time></span></span></div><div class="stack jsx-659253495 item-details" data-cy="item-details"><div data-cy="caption" class="caption jsx-1762799490 item-publish-date small">Oct 10, 2023</div><span class="interface jsx-326752785 jsx-4254096439 item-title bold" data-cy="item-title">Mars Tactics - Official Gameplay Trailer</span><div class="interface jsx-326752785 jsx-957202555 item-subtitle small" data-cy="item-subtitle">Oct 10, 2023</div><div class="stack jsx-59817748 jsx-3492383812 item-more-data"><object data-cy="object-related-content-link" class="caption jsx-1762799490 data small" title="Related Content Link"><a class="caption jsx-1762799490 data small" data-cy="object-related-content-link-caption" href="/games/mars-tactics"><span class="ign-icon icon-game-object jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-game-object" aria-label="Game" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/GameObject.1056bc66.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>Mars Tactics</a></object><div data-cy="caption" class="caption jsx-1762799490 jsx-2088664416 comment-count data small"><span class="ign-icon icon-comment jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-comment" aria-label="Comments" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/Comment.e2c389d0.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>3</div></div></div></a></div><div data-cy="content-item" class="content-item jsx-2981448069 row divider" data-id="6a0cf834-b1ba-4a92-92e1-ad3da9bd07ca"><a data-cy="item-body" class="item-body" aria-label="Mars Tactics' New Trailer Shows Off Pre-Alpha Gameplay" href="/videos/mars-tactics-official-tacticon-2023-trailer"><div data-cy="item-thumbnail" class="item-thumbnail"><span><img alt="Mars Tactics' New Trailer Shows Off Pre-Alpha Gameplay" decoding="async" class="progressive-image jsx-2021719738 item-image aspect-ratio aspect-ratio-16-9 jsx-2605834259 jsx-2338608387 hover-opacity" loading="lazy" src="https://assets-prd.ignimgs.com/2023/05/12/marstacticstacticon23-1683884341176.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80" data-cy="progressive-image" srcset="https://assets-prd.ignimgs.com/2023/05/12/marstacticstacticon23-1683884341176.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80 1x, https://assets-prd.ignimgs.com/2023/05/12/marstacticstacticon23-1683884341176.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;dpr=2&amp;format=jpg&amp;auto=webp&amp;quality=80 2x" pinger-seen="true"><span data-duration="162" class="jsx-1396601900 video-duration"><time data-cy="caption" class="caption jsx-1762799490 bold">2:42</time></span></span></div><div class="stack jsx-659253495 item-details" data-cy="item-details"><div data-cy="caption" class="caption jsx-1762799490 item-publish-date small">May 12, 2023</div><span class="interface jsx-326752785 jsx-4254096439 item-title bold" data-cy="item-title">Mars Tactics' New Trailer Shows Off Pre-Alpha Gameplay</span><div class="interface jsx-326752785 jsx-957202555 item-subtitle small" data-cy="item-subtitle">May 12, 2023 - Get a good look at the turn-based strategy game.</div><div class="stack jsx-59817748 jsx-3492383812 item-more-data"><object data-cy="object-related-content-link" class="caption jsx-1762799490 data small" title="Related Content Link"><a class="caption jsx-1762799490 data small" data-cy="object-related-content-link-caption" href="/games/mars-tactics"><span class="ign-icon icon-game-object jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-game-object" aria-label="Game" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/GameObject.1056bc66.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>Mars Tactics</a></object><div data-cy="caption" class="caption jsx-1762799490 jsx-2088664416 comment-count data small"><span class="ign-icon icon-comment jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-comment" aria-label="Comments" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/Comment.e2c389d0.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>1</div></div></div></a></div><div data-cy="content-item" class="content-item jsx-2981448069 row divider" data-id="483803ad-8d2a-4694-b8b5-3c9cec1ea134"><a data-cy="item-body" class="item-body" aria-label="Mars Tactics - Announcement Trailer" href="/videos/mars-tactics-announcement-trailer"><div data-cy="item-thumbnail" class="item-thumbnail"><span><img alt="Mars Tactics - Announcement Trailer" decoding="async" class="progressive-image jsx-2021719738 item-image aspect-ratio aspect-ratio-16-9 jsx-2605834259 jsx-2338608387 hover-opacity" loading="lazy" src="https://assets1.ignimgs.com/thumbs/userUploaded/2022/5/17/marstacticsannouncementtrailerignblogroll-1652795175206.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80" data-cy="progressive-image" srcset="https://assets1.ignimgs.com/thumbs/userUploaded/2022/5/17/marstacticsannouncementtrailerignblogroll-1652795175206.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;format=jpg&amp;auto=webp&amp;quality=80 1x, https://assets1.ignimgs.com/thumbs/userUploaded/2022/5/17/marstacticsannouncementtrailerignblogroll-1652795175206.jpg?crop=16%3A9&amp;width=240&amp;height=135&amp;dpr=2&amp;format=jpg&amp;auto=webp&amp;quality=80 2x" pinger-seen="true"><span data-duration="93" class="jsx-1396601900 video-duration"><time data-cy="caption" class="caption jsx-1762799490 bold">1:33</time></span></span></div><div class="stack jsx-659253495 item-details" data-cy="item-details"><div data-cy="caption" class="caption jsx-1762799490 item-publish-date small">May 17, 2022</div><span class="interface jsx-326752785 jsx-4254096439 item-title bold" data-cy="item-title">Mars Tactics - Announcement Trailer</span><div class="interface jsx-326752785 jsx-957202555 item-subtitle small" data-cy="item-subtitle">May 17, 2022</div><div class="stack jsx-59817748 jsx-3492383812 item-more-data"><object data-cy="object-related-content-link" class="caption jsx-1762799490 data small" title="Related Content Link"><a class="caption jsx-1762799490 data small" data-cy="object-related-content-link-caption" href="/games/mars-tactics"><span class="ign-icon icon-game-object jsx-2750866048 jsx-2145005295" role="img" aria-hidden="false" data-cy="icon-game-object" aria-label="Game" style="mask: url(&quot;https://kraken.ignimgs.com/_next/static/media/GameObject.1056bc66.svg&quot;) center center / contain no-repeat; background: currentcolor;"></span>Mars Tactics</a></object></div></div></a></div></section>
+
+
+三、Media英文页面
+放一些视频和游戏截图进去
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0FysDXe03MA?si=Zunaz3JUuRtoKRUL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lk1p-9aozqs?si=X8qzyDXXIfb6nAq1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vcvu1wM0r-g?si=fDe7algEbh3I-B_-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/29J_xwskJhY?si=mC4rjTEz6NOcMvo9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+四、Guides英文页面
+参考resource下的pdf内容，以及下面的一些资料进行分析补充内容
+下面是一些文案资料，可以放到首页以及攻略二面
+
+没问题，我们进一步深入。由于《火星战术》（Mars Tactics）是一款深度致敬《XCOM》和《Jagged Alliance》的硬核作品，它的精髓在于**底层模拟机制**。
+
+以下是针对各板块的深度拆解：
+
+---
+
+## 一、 核心战斗机制：深度模拟 (Combat Deep Dive)
+
+《火星战术》最出色的地方在于它不是简单的“概率命中”，而是基于**物理弹道**。
+
+* **动态掩体系统：** 掩体不是死板的减伤数值。游戏计算每一颗子弹的轨迹。如果敌人躲在油桶后，子弹可能打掉油桶的边缘，或者直接击穿薄弱的木板。
+* **压制与反击：** * 即使没有命中，只要子弹在角色身边飞过，就会增加其**压制槽**。
+* **深度策略：** 你可以派遣一名机枪手进行“火力压制”，完全锁死敌人的移动路径，让侧翼游走位（Flanker）安全推进。
+
+
+* **不仅是平面战场：** 游戏非常强调**垂直空间**。占领屋顶不仅能获得射程优势，还能看穿敌人的低级掩体。
+
+---
+
+## 二、 角色进化：从菜鸟到老兵 (Character Progression)
+
+游戏废弃了传统的职业选择，改用**“基于行为的学习”系统**。
+
+* **技能树演化：** * 如果一个士兵经常在近距离使用散弹枪，他会自动解锁增加移动力或近战防御的技能。
+* 如果一个士兵频繁使用医疗包，他会逐渐演变成“医护兵”。
+
+
+* **特质 (Traits)：**
+* **正面特质：** 比如“冷血”（目睹战友倒下不降士气）、“神射手”（站定射击加成）。
+* **负面特质：** 长期受伤可能导致“心理创伤”，或者因为补给不足产生“悲观”情绪，导致行动点减少。
+
+
+* **领导力：** 随着战斗经验增加，士兵可以升职为军官，为周围小队成员提供光环加成。
+
+---
+
+## 三、 两大阵营的差异化 (Factions)
+
+选择不同的阵营不仅仅是换个颜色，而是完全不同的资源管理策略。
+
+| 特性 | **企业方 (Labor/Capital)** | **起义军 (Uprising)** |
+| --- | --- | --- |
+| **经济** | 资金雄厚，依靠税收和开采。 | 资源匮乏，依靠黑市和缴获。 |
+| **科技** | 起始科技高，拥有精准激光武器和无人机。 | 初始武器差，通过魔改（Scrap）装备获得特殊效果。 |
+| **兵源** | 训练有素的雇佣兵，单兵素质极高。 | 人数优势，阵亡补充快，擅长人海战术。 |
+| **战略目标** | 维持秩序，镇压反抗，保护工业区。 | 破坏供应链，解放工区，通过游击战消耗敌人。 |
+
+---
+
+## 四、 详细通关攻略 (Strategy Guide)
+
+### 1. 战略层：兵马未动，粮草先行
+
+* **控制空域：** 运输机是你的生命线。没有足够的空中支持，你无法快速增援受袭击的据点。优先升级运输机的航程和速度。
+* **贸易路线：** 即使是战争时期，也要保护好采矿设施。没有矿产，你就无法在黑市更换高级弹药。
+
+### 2. 战术层：进阶技巧
+
+* **破坏环境的战术：** * 如果敌人在高层，直接用炸药包炸毁地板，敌人会跌落并受到巨额摔伤，同时失去高度优势。
+* 利用油桶和易燃物制造“区域阻断”。
+
+
+* **夜战与灯光：** * 游戏有昼夜循环。夜战中，你可以射击光源让敌人陷入黑暗（降低命中率），或者投掷照明弹强制暴露潜行的敌人。
+* **由于有友军伤害 (Friendly Fire)：** 严禁让新兵站在老兵身后射击，新兵的低命中率极大概率会打中队友的后脑勺。
+
+---
+
+## 五、 FAQ 与 故障排查 (Detailed FAQ)
+
+* **Q: 为什么我的士兵总是射不中？**
+* **A:** 检查士兵是否有压制状态（红色条）、伤口、或处于极端距离。优先使用“蹲伏”来稳定准星。
+
+
+* **Q: 士兵受重伤后怎么办？**
+* **A:** 战斗中只能简单包扎止血。战斗结束后，必须将其撤回有医疗设施的基地进行数天的康复，否则属性会永久下降。
+
+
+* **Q: 游戏后期变难了，怎么办？**
+* **A:** 敌人会进化出装甲。你必须开始研究**穿甲弹（AP）**或使用重型火炮，单纯的突击步枪在后期收效甚微。
+
+
+
+---
+
+## 六、 开发者与社区 (About & Support)
+
+* **开发者愿景：** Takuma Lab 旨在创造一个真实的火星社会生态，每一个士兵都有其背景故事，每一次撤退都有其战略代价。
+* **Mod 支持：** 游戏在 Steam 创意工坊非常活跃，有很多玩家制作的皮肤和新武器模组。
+* **版本更新：** 开发者保持着高频率的补丁更新，重点在于优化大规模战斗时的帧率和 AI 的逻辑（AI 也会包抄和撤退）。
+
+---
+
+**您是否需要我针对“起义军”和“企业方”各自的科技树解锁顺序做一份专门的路径建议？** 或者您可以告诉我，您在游玩过程中最常遇到的具体困难（比如总是缺钱或者某个地图过不去）。
+
+既然你希望内容更加详实、具有实操性，我们现在进入《火星战术》的**“大师级”进阶手册**。这一部分将聚焦于游戏的高级系统模拟、具体的战术逻辑以及针对复杂局势的生存策略。
+
+---
+
+## 七、 深度系统解析：超越基础玩法
+
+### 1. 物理弹道与动能模拟 (Ballistics & Momentum)
+
+不同于《XCOM》的“数值判定”，本作的每一发子弹都有物理属性：
+
+* **穿透力 (Penetration)：** 木板、薄金属片和人体是可以被击穿的。这意味着你可以击穿掩体伤到后面的敌人，或者一发狙击弹造成串联杀伤。
+* **跳弹机制：** 在坚硬表面（如强化混凝土）上，低角度射击可能发生跳弹，这既是风险也是机会。
+* **碎裂效果：** 掩体被击中后产生的碎片（Shrapnel）会对周围角色造成轻微伤害并增加压力值。
+
+### 2. 补给与物流链 (Logistics System)
+
+在战略层面上，这不仅是战斗游戏，更是物流游戏：
+
+* **弹药种类：** 你需要为小队配置不同口径的弹药（9mm, 5.56, .308等）。如果战略地图上的补给线被切断，你的士兵在战场上用光子弹后将只能使用刺刀或捡取敌人的劣质武器。
+* **燃油与运输：** 运输机（Dropship）不仅消耗燃料，还需要维护。频繁的空降会导致运输机受损，维修期间你的小队将被困在基地。
+
+---
+
+## 八、 详细职业演化路径 (Specialization Paths)
+
+虽然没有固定职业，但通过特定装备和行动，你可以培养出以下**核心角色形态**：
+
+* **压制专家 (Suppressor)：**
+* **核心装备：** 轻机枪 (LMG)、大容量弹鼓。
+* **核心动作：** 区域监视、火力压制。
+* **作用：** 剥夺敌人的行动点（AP），让他们无法在下一回合反击或撤退。
+
+
+* **破障手 (Breacher)：**
+* **核心装备：** 散弹枪、塑胶炸弹 (C4)、重型防弹衣。
+* **核心动作：** 爆破墙体、近距离突击。
+* **作用：** 改变地形。当敌人死守室内时，直接炸开侧墙进入。
+
+
+* **信号官 (Signal Officer)：**
+* **核心装备：** 通讯电台、无人机控制器。
+* **核心动作：** 呼叫迫击炮支援、标记目标。
+* **作用：** 在安全距离外解决高威胁目标。
+
+
+
+---
+
+## 九、 终极战术指南：应对复杂局面
+
+### 1. 室内近距离战斗 (CQB) 策略
+
+* **切角 (Cutting the Pie)：** 移动时不要直接冲进房间。利用微小的步幅逐步观察门内死角。
+* **震撼弹先行：** 投掷震撼弹不仅降低敌人命中率，还能直接清空对方的监视（Overwatch）状态。
+
+### 2. 撤退是一门艺术
+
+* 本作中，**全歼敌人并不总是最优解**。
+* 如果任务目标（如窃取资料）已完成，且敌人增援正在抵达，果断撤退。
+* **掩护撤退：** 留下一两名高命中率士兵开启“监视”模式，其他人先走，最后由机动性最强的士兵收尾。
+
+---
+
+## 十、 阵营专属科技树与建筑策略
+
+### 企业方 (Labor/Capital) —— 工业优先
+
+* **初期建议：** 优先升级“自动工厂”。企业方依赖精密装备，通过自动化生产可以降低每件防弹衣的成本。
+* **核心科技：** “智能感应器”。这能让你的士兵在战争迷雾中更早探测到敌人的移动信号。
+
+### 起义军 (Uprising) —— 人民战争
+
+* **初期建议：** 优先升级“隐蔽营地”。这能让你的部队在地图上更难被企业的雷达发现，方便发动偷袭。
+* **核心科技：** “简易改装”。允许你将工业激光切割机改装成远程致盲武器，以极低成本对抗高科技敌人。
+
+---
+
+## 十一、 高级 FAQ：硬核玩家关注点
+
+* **Q: 为什么我的士兵在没有受伤的情况下突然拒绝服从命令？**
+* **A:** 检查**“恐慌值”**。持续的火力压制或目睹大量血腥场面会导致士兵精神崩溃。你需要让他们远离火线一两个回合，或使用精神类药物。
+
+
+* **Q: 战场上的天气（如沙尘暴）有什么实际影响？**
+* **A:** 沙尘暴会大幅降低视野和射程，导致远程狙击手作废。此时应换上散弹枪和近战武器，利用近距离接战优势。
+
+
+* **Q: 如何有效获取高级装备？**
+* **A:** 除了自己研发，最快的方法是**“精确射击”**敌方精锐部队的头部，保留其身体护甲的完整性，战斗结束后有更高概率缴获。
+
+
+
+---
+
+## 十二、 关于游戏的未来 (Future & Modding)
+
+《火星战术》的架构对开发者非常友好：
+
+* **关卡编辑器：** 游戏自带地图生成器，玩家可以自定义复杂的工业迷宫并分享到社区。
+* **潜行机制优化：** 开发者正在测试更完善的声响系统，未来“静默潜入”完成任务将成为可能。
+
+---
+
+**接下来，你想看具体的哪一部分？**
+
+1. **武器数据表：** 比如每种口径子弹对不同护甲的穿透数值对比。
+2. **具体任务流程：** 比如“突袭企业研究基地”的步步拆解攻略。
+3. **战役模式（Campaign）管理：** 详细讲解如何从零开始建立第一个基地。
+
+
+四、每个页面的meta都需要进行更新，同时privacy-policy和terms-of-service也需要根据现有的游戏主题内容进行更新
+
+五、sitemap.xml，robot.txt,readme.md等都更新，sitemap.xml的日期都填写为2026-01-08
+
+六、你看看上面的攻略以及pdf，还能帮忙生成一个什么页面，并在页面中插入相应的图片
+
+七、帮忙生成中英文的1000字推文，标题新颖，同时文案类需要带当前网站的链接或者外链，可以插入相关的图片，域名是当前网站的域名
+
+
+

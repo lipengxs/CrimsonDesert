@@ -1,0 +1,57 @@
+假设你是html、js、css高级程序员，你需要建设网站。
+我期望你参考https://www.paxautocratica.com/ 这个网站，帮忙制作一个网站，我注册了pax-autocratica.com这个域名，需要你帮忙设计一个网站，该网站主要是来介绍PAX AUTOCRATICA这个游戏，这个游戏的不同页面的结构一样，都是header（logo+菜单）、main（主要文案）、footer，整体网站都是英文网站，
+这里整体网站的架构是html+css+js，这个网站会部署到cloudflare的page
+这里一些通用的css样式可以都放到static/base.css，比如说header、footer、整体风格
+通用的js放到static/base.js，其他页面引入都增加一个版本号，整体网站要符合google seo规范，header中的一些必要的meta自动帮忙生成
+你可以先根据我提供的内容，分析下可以做哪些菜单，下面是一些网站内容；
+```
+相关资料可以看看这几个网站，
+https://www.paxautocratica.com/
+https://store.epicgames.com/zh-Hant/p/pax-autocratica-4160ec
+https://www.gamespark.jp/article/2025/12/17/160679.html
+https://www.gamespress.com/Pax-Autocratica-a-Satirical-Totalitarianism-Colony-Sim-with-FPS-Roguel
+https://news.yahoo.co.jp/articles/6e0076c6a8184823d5c5a18f6a73fa5c4797999c
+https://in.ign.com/earth-from-another-sun/249152/video/pax-autocratica-official-release-date-trailer
+
+
+你可以先爬取上面网站的内容进行分析
+同时也分析下我本地resources目录下的网页和图片文件，帮忙丰富我网站的内容
+你先帮忙把图片中的内容
+https://www.gamespark.jp/imgs/zoom/1068664.jpg
+按照https://www.gamespark.jp/imgs/zoom/这个前缀下载到本地，然后把图片移动到/static/images/media目录中
+
+一、首页 页面
+首页至少包含下面几块内容
+1、菜单栏，包含Home（首页链接）、News（新闻页面）、Media（多媒体页面）、Guides（攻略菜单），这里的菜单栏你可以自己根据内容进行增加或者删减，不要局限于我给定的菜单了
+2、向大家介绍PAX AUTOCRATICA是什么，发布时间，发布中需要有倒计时时钟（即将推出：2026 年 2 月 3 日）
+3、游戏介绍，下面放一个youtubo视频iframe，参考这个<iframe width="560" height="315" src="https://www.youtube.com/embed/w9bREKlyMq4?si=AIBzs0HL9ppzD954" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>下面是剧情、背景、语言等
+4、how to play，
+5、放一些游戏截图
+6、FAQ，
+7、meta部分都要根据内容重新更新
+8、footer中的链接栏得根据header中的menu进行更新
+你可以发挥想象生成内容，使得围绕着关键字内容丰富，要求配色简洁清晰漂亮，整个页面是一个落地页，你需要围绕着关键词Crimson Desert游戏去写页面内容。 我希望你能够写一个 SEO 友好的页面，有落地页的常见 Section，整体单词数量大于1000个，核心关键词PAX AUTOCRATICA的密度在3%左右。  同时你扫描static/images下的
+
+
+
+二、News英文页面
+页面参考https://paralives.info/news/的最新咨询部分，帮忙生成一个新闻列表，点击可以直接跳转到对应的页面，列表页需要包含标题、提示、图片、链接跳转是直接打开新页面  
+
+
+三、Media英文页面
+放一些视频和游戏截图进去
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w9bREKlyMq4?si=jA_oeSfArIvBh0Cl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w9bREKlyMq4?si=AIBzs0HL9ppzD954" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dG1FaD5mmXE?si=HfcRj6geUK4yTQwZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PKHmwx0iebA?si=b5hW95sUbhx4adBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+四、Guides英文页面
+https://www.paxautocratica.com/support，爬取这个页面的内容，同时整合我上面提供的一些咨询网站，给出攻略内容，
+同时还可以结合本地的resources/目录下内容网站来整合内容
+
+
+四、每个页面的meta都需要进行更新，同时privacy-policy和terms-of-service也需要根据现有的游戏主题内容进行更新
+
+五、sitemap.xml，rob等都更新
+
+

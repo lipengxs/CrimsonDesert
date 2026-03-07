@@ -1,6 +1,8 @@
-# Crimson Desert
+# Crimson Desert - Fan Website
 
-Welcome to the official website repository for Crimson Desert, an epic open-world action adventure game developed by Pearl Abyss.
+**⚠️ IMPORTANT DISCLAIMER: This is NOT the official Crimson Desert website. This is a fan website created by enthusiasts. The official website is located at [crimsondesert.pearlabyss.com](https://crimsondesert.pearlabyss.com)**
+
+Welcome to the fan website repository for Crimson Desert, an epic open-world action adventure game developed by Pearl Abyss.
 
 ## Overview
 
