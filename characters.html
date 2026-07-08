@@ -57,6 +57,21 @@
 
   gtag('config', 'G-SMS4GPK0S4');
 </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Crimson Desert Characters",
+      "url": "https://crimson-desert.com/characters",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Kliff", "url": "https://crimson-desert.com/characters#kliff"},
+        {"@type": "ListItem", "position": 2, "name": "Oongka", "url": "https://crimson-desert.com/characters#oongka"},
+        {"@type": "ListItem", "position": 3, "name": "Yann", "url": "https://crimson-desert.com/characters#yann"},
+        {"@type": "ListItem", "position": 4, "name": "Naira", "url": "https://crimson-desert.com/characters#naira"}
+      ]
+    }
+    </script>
     
     <style>
         .characters-hero {
@@ -216,6 +231,20 @@
             margin-bottom: 1.5rem;
         }
 
+        .source-note {
+            background: rgba(212, 175, 55, 0.10);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .source-note strong {
+            color: var(--accent-gold);
+        }
+
         @media (max-width: 768px) {
             .characters-hero h1 {
                 font-size: 2.5rem;
@@ -300,8 +329,11 @@
             <div class="container">
                 <div class="character-section">
                     <h2>Main Characters</h2>
+                    <div class="source-note">
+                        <p><strong>Content note:</strong> This character guide is maintained as a fan resource for Crimson Desert's Pywel story. Character pages should stay aligned with official Pearl Abyss media, store-page text, and post-launch updates; combat roles below are written as guide-friendly summaries rather than hidden stat claims.</p>
+                    </div>
                     <div class="character-grid">
-                        <div class="character-card">
+                        <div class="character-card" id="kliff">
                             <img src="static/images/crimson-desert/04.jpg" alt="Kliff" class="character-image">
                             <h3>Kliff</h3>
                             <p class="character-role">Leader of the Greymanes</p>
@@ -317,7 +349,7 @@
                             </div>
                         </div>
 
-                        <div class="character-card">
+                        <div class="character-card" id="oongka">
                             <img src="static/images/crimson-desert/05.jpg" alt="Oongka" class="character-image">
                             <h3>Oongka</h3>
                             <p class="character-role">Greymanes Member</p>
@@ -333,7 +365,7 @@
                             </div>
                         </div>
 
-                        <div class="character-card">
+                        <div class="character-card" id="yann">
                             <img src="static/images/crimson-desert/06.jpg" alt="Yann" class="character-image">
                             <h3>Yann</h3>
                             <p class="character-role">Greymanes Member</p>
@@ -349,7 +381,7 @@
                             </div>
                         </div>
 
-                        <div class="character-card">
+                        <div class="character-card" id="naira">
                             <img src="static/images/crimson-desert/07.jpg" alt="Naira" class="character-image">
                             <h3>Naira</h3>
                             <p class="character-role">Greymanes Member</p>
@@ -460,4 +492,3 @@
     </script>
 </body>
 </html>
-

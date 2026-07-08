@@ -3,13 +3,13 @@
     <!-- Main Navigation URLs -->
     <url>
         <loc>https://crimson-desert.com/</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/news</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -21,21 +21,51 @@
     </url>
     <url>
         <loc>https://crimson-desert.com/guides</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-06-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://crimson-desert.com/beginner-guide</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/world-map</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/bosses</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/community-guides</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://crimson-desert.com/characters</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/release-date</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/system-requirements</loc>
+        <lastmod>2026-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://crimson-desert.com/privacy-policy</loc>
@@ -49,6 +79,12 @@
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
+    <url>
+        <loc>https://crimson-desert.com/similar-games</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     
     <!-- Chinese (Simplified) URLs -->
     <url>
@@ -59,7 +95,7 @@
     </url>
     <url>
         <loc>https://crimson-desert.com/zh-CN/news</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -71,7 +107,7 @@
     </url>
     <url>
         <loc>https://crimson-desert.com/zh-CN/guides</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -91,7 +127,7 @@
     </url>
     <url>
         <loc>https://crimson-desert.com/ja-JP/news</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -103,7 +139,7 @@
     </url>
     <url>
         <loc>https://crimson-desert.com/ja-JP/guides</loc>
-        <lastmod>2025-12-27</lastmod>
+        <lastmod>2026-06-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
