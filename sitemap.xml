@@ -167,4 +167,23 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url><loc>https://crimson-desert.com/blog</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url>
+        <loc>https://crimson-desert.com/patch-1-14-00</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/cross-save-guide</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://crimson-desert.com/crimson-desert-vs-black-desert</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
