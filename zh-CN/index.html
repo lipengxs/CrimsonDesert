@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>红色沙漠 - 开放世界动作冒险 | 官方网站</title>
-    <meta name="description" content="红色沙漠已于2026年3月19日发布。探索帕卫尔大陆、克里夫与灰鬃佣兵团的故事，并查看版本内容、原声音乐、平台信息与发售后攻略。">
+    <title>红色沙漠独立攻略站 | 状态、剧情与攻略资料</title>
+    <meta name="description" content="红色沙漠独立、非官方资料站，整理一次来源链接、商店状态、公开剧情资料和攻略入口。">
     <meta name="keywords" content="红色沙漠, 红色沙漠游戏, 开放世界动作冒险, Pearl Abyss, Pywel, Kliff, 灰鬃, 红色沙漠发布日期, 红色沙漠2026, 动作RPG, 开放世界游戏">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://crimson-desert.com/zh-CN/">
-    <meta property="og:title" content="红色沙漠 - 开放世界动作冒险 | 官方网站">
-    <meta property="og:description" content="红色沙漠已发布。在广阔的帕卫尔大陆体验开放世界动作冒险。">
+    <meta property="og:title" content="红色沙漠独立攻略站 | 非官方资料参考">
+    <meta property="og:description" content="提供带一次来源链接的红色沙漠独立资料与攻略入口。">
     <meta property="og:image" content="https://crimson-desert.com/static/images/crimson-desert/01.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="红色沙漠 - 开放世界动作冒险">
-    <meta name="twitter:description" content="红色沙漠已发布。在广阔的帕卫尔大陆体验开放世界动作冒险。">
+    <meta name="twitter:title" content="红色沙漠独立攻略站">
+    <meta name="twitter:description" content="提供带一次来源链接的独立、非官方资料参考。">
     <meta name="twitter:image" content="https://crimson-desert.com/static/images/crimson-desert/01.jpg">
     
     <!-- Canonical -->
@@ -581,30 +581,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>红色沙漠</h1>
-                    <p class="subtitle">佣兵们惨烈的史诗故事 - 开放世界动作冒险</p>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">现已发布 - 2026年3月19日</p>
-                    <div class="countdown-container">
-                        <h2>发售后资讯追踪</h2>
-                        <div class="countdown">
-                            <div class="countdown-item">
-                                <span id="days">00</span>
-                                <label>天</label>
-                            </div>
-                            <div class="countdown-item">
-                                <span id="hours">00</span>
-                                <label>小时</label>
-                            </div>
-                            <div class="countdown-item">
-                                <span id="minutes">00</span>
-                                <label>分钟</label>
-                            </div>
-                            <div class="countdown-item">
-                                <span id="seconds">00</span>
-                                <label>秒</label>
-                            </div>
-                        </div>
-                    </div>
+                    <h1>红色沙漠独立攻略站</h1>
+                    <p class="subtitle">整理公开资料、商店核验与攻略入口的非官方网站</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">发售状态、平台、价格和更新内容请以 <a href="https://crimsondesert.pearlabyss.com" target="_blank" rel="noopener noreferrer">Pearl Abyss 官方网站</a> 及官方商店为准。</p>
                 </div>
             </div>
         </section>
@@ -777,10 +756,10 @@
                 <div class="footer-links">
                     <h3>社区</h3>
                     <ul>
-                        <li><a href="https://discord.gg/crimsondesert" target="_blank" rel="noopener">Discord</a></li>
-                        <li><a href="https://twitter.com/crimsondesert" target="_blank" rel="noopener">Twitter</a></li>
-                        <li><a href="https://www.youtube.com/crimsondesert" target="_blank" rel="noopener">YouTube</a></li>
-                        <li><a href="https://www.twitch.tv/crimsondesert" target="_blank" rel="noopener">Twitch</a></li>
+                        <li><a href="https://discord.gg/crimsondesert" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                        <li><a href="https://twitter.com/crimsondesert" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/crimsondesert" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/crimsondesert" target="_blank" rel="noopener noreferrer">Twitch</a></li>
                     </ul>
                 </div>
             </div>
@@ -798,37 +777,6 @@
     <script>
         // Wait for DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Countdown Timer - March 19, 2026
-            const countDownDate = new Date("March 19, 2026 00:00:00").getTime();
-
-            const countdown = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                const daysEl = document.getElementById("days");
-                const hoursEl = document.getElementById("hours");
-                const minutesEl = document.getElementById("minutes");
-                const secondsEl = document.getElementById("seconds");
-
-                if (daysEl) daysEl.innerHTML = days.toString().padStart(2, '0');
-                if (hoursEl) hoursEl.innerHTML = hours.toString().padStart(2, '0');
-                if (minutesEl) minutesEl.innerHTML = minutes.toString().padStart(2, '0');
-                if (secondsEl) secondsEl.innerHTML = seconds.toString().padStart(2, '0');
-
-                if (distance < 0) {
-                    clearInterval(countdown);
-                    const countdownEl = document.querySelector(".countdown");
-                    if (countdownEl) {
-                        countdownEl.innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CRIMSON DESERT LAUNCHED!</div>";
-                    }
-                }
-            }, 1000);
-
             // FAQ Accordion - Ensure it works even if base.js hasn't loaded
             // FAQ Accordion
             const faqQuestions = document.querySelectorAll('.faq-question');
